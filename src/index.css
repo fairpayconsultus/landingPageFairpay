@@ -1,0 +1,220 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #1A1A1A;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+/* Text gradient utility */
+.text-gradient {
+  background: linear-gradient(90deg, #000080 0%, #4B0082 50%, #A0522D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Custom CTA button gradient */
+.btn-custom-gradient {
+  background: linear-gradient(90deg, #6A1B9A 0%, #000080 100%);
+}
+
+.btn-custom-gradient:hover {
+  background: linear-gradient(90deg, #5A0F8A 0%, #000070 100%);
+}
+
+/* Hero background */
+.hero-bg {
+  background: radial-gradient(circle at top, rgba(75, 0, 130, 0.1) 0%, transparent 70%);
+}
+
+/* Button styles */
+.btn-primary {
+  @apply inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-hover transition-all duration-200 shadow-sm hover:shadow-md;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center gap-2 bg-accent text-white px-6 py-3 rounded-lg font-semibold hover:bg-accent-red transition-all duration-200 shadow-sm hover:shadow-md;
+}
+
+.btn-outline {
+  @apply inline-flex items-center gap-2 border-2 border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary hover:text-white transition-all duration-200;
+}
+
+/* Section padding */
+.section-pad {
+  @apply py-16 md:py-24;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100;
+}
+
+.card-elevated {
+  @apply bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100;
+}
+
+/* Gradient border for highlighted cards */
+.gradient-border-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #4B0082 0%, #FF8C00 100%);
+  border-radius: 12px 12px 0 0;
+}
+
+/* Animation utilities */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Scroll indicator animation */
+@keyframes bounce-scroll {
+  0%, 20%, 50%, 80%, 100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  60% {
+    opacity: 0.5;
+    transform: translateY(-5px);
+  }
+}
+
+.animate-bounce-scroll {
+  animation: bounce-scroll 2s infinite;
+}
+
+/* Footer advanced styling */
+.footer-gradient-bg {
+  background: linear-gradient(180deg, #000000 0%, #080C14 100%);
+  position: relative;
+}
+
+.footer-glow-effect {
+  position: relative;
+}
+
+.footer-glow-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(255, 140, 0, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.footer-glow-effect > * {
+  position: relative;
+  z-index: 2;
+}
+
+.footer-divider {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Fairpay Icon Gradients */
+.gradient-management {
+  background: linear-gradient(135deg, #4B0082 0%, #2D1B69 100%);
+}
+
+.gradient-management-alt {
+  background: linear-gradient(135deg, #FF8C00 0%, #4B0082 100%);
+}
+
+.gradient-benefits {
+  background: linear-gradient(180deg, #FF8C00 0%, #4B0082 100%);
+}
+
+/* IA Powered Badge Gradient */
+.gradient-ia-badge {
+  background: linear-gradient(90deg, #FF8C00 0%, #4B0082 100%);
+}
+
+/* Blinking dot animation */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.dot-blink {
+  animation: blink 2s infinite ease-in-out;
+  background: linear-gradient(135deg, #FF8C00 0%, #4B0082 100%);
+}
+
+/* WhatsApp pulse animation */
+@keyframes whatsapp-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-pulse {
+  animation: whatsapp-pulse 2s infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4B0082;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5B109E;
+}
