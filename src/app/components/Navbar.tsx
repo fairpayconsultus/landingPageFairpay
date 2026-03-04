@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import logoFairpay from "../../assets/logo-fairpay.svg";
+import logoFairpay from "../../assets/logo-fairpay.png";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

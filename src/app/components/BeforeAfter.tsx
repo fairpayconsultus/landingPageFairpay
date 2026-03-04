@@ -158,7 +158,7 @@ export function BeforeAfter() {
               transition={{ duration: 0.5, delay: 0.8 }}
               className="absolute -top-4 -right-4 bg-gradient-to-r from-[#ff7f27] to-[#6f1794] text-white px-4 py-2 rounded-full font-bold shadow-lg"
             >
-              IA Powered
+              Con tecnología IA
             </motion.div>
           </motion.div>
         </div>

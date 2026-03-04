@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
-import logoFairpay from "../../assets/logo-fairpay.svg";
+import logoFairpay from "../../assets/logo-fairpay.png";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
