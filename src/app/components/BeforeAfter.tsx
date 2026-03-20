@@ -8,23 +8,27 @@ export function BeforeAfter() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const beforeItems = [
-    { icon: X, text: "Procesos manuales y repetitivos", color: "text-red-500" },
-    { icon: X, text: "Inversión excesiva de recursos", color: "text-red-500" },
-    { icon: X, text: "Falta de equidad y transparencia", color: "text-red-500" },
-    { icon: X, text: "Análisis limitados y subjetivos", color: "text-red-500" },
+    { icon: X, text: "Estudios salariales esporádicos", color: "text-red-500" },
+    { icon: X, text: "Consultoría puntual", color: "text-red-500" },
+    { icon: X, text: "Información fragmentada", color: "text-red-500" },
+    { icon: X, text: "Decisiones intuitivas", color: "text-red-500" },
+    { icon: X, text: "Alto costo por proyecto", color: "text-red-500" },
+    { icon: X, text: "Dependencia externa", color: "text-red-500" },
   ];
 
   const afterItems = [
-    { icon: Check, text: "Biblioteca de fundamentos en línea", color: "text-green-500" },
-    { icon: TrendingUp, text: "Ejecución acelerada y eficiente", color: "text-green-500" },
-    { icon: Users, text: "Participación por roles asignados", color: "text-green-500" },
-    { icon: Target, text: "Equidad interna garantizada por IA", color: "text-green-500" },
+    { icon: Check, text: "Inteligencia salarial permanente", color: "text-green-500" },
+    { icon: TrendingUp, text: "Plataforma de gestión continua", color: "text-green-500" },
+    { icon: Target, text: "Datos integrados y analítica salarial", color: "text-green-500" },
+    { icon: Users, text: "Decisiones basadas en evidencia", color: "text-green-500" },
+    { icon: Zap, text: "Modelo escalable", color: "text-green-500" },
+    { icon: Check, text: "Autonomía organizacional", color: "text-green-500" },
   ];
 
   return (
-    <section id="cambio" ref={ref} className="py-24 bg-white relative overflow-hidden">
+    <section id="cambio" ref={ref} className="py-24 bg-gradient-to-br from-blue-50 via-white to-cyan-50/40 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-50/30 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-100/40 to-transparent pointer-events-none" />
       
       {/* Floating decorative elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -38,7 +42,7 @@ export function BeforeAfter() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute top-32 right-12 w-16 h-16 rounded-2xl bg-gradient-to-br from-[#6f1794]/5 to-[#ff7f27]/5 backdrop-blur-sm border border-purple-200/30"
+          className="absolute top-32 right-12 w-16 h-16 rounded-2xl bg-gradient-to-br from-[#10182b]/15 to-[#a8d9fa]/20 backdrop-blur-sm border border-[#a8d9fa]/50"
         />
         <motion.div
           animate={{
@@ -50,7 +54,7 @@ export function BeforeAfter() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute bottom-20 left-16 w-20 h-20 rounded-full bg-gradient-to-br from-[#ff7f27]/5 to-[#000080]/5 backdrop-blur-sm border border-orange-200/30"
+          className="absolute bottom-20 left-16 w-20 h-20 rounded-full bg-gradient-to-br from-[#a8d9fa]/20 to-[#405687]/15 backdrop-blur-sm border border-[#405687]/50"
         />
         <motion.div
           animate={{
@@ -62,7 +66,7 @@ export function BeforeAfter() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-3xl bg-gradient-to-br from-[#000080]/3 to-[#6f1794]/3 backdrop-blur-sm border border-blue-200/20"
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-3xl bg-gradient-to-br from-[#405687]/10 to-[#10182b]/10 backdrop-blur-sm border border-blue-300/30"
         />
       </div>
 
@@ -74,14 +78,14 @@ export function BeforeAfter() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-2 bg-gradient-to-r from-[#6f1794]/10 to-[#000080]/10 text-[#6f1794] rounded-full font-semibold mb-4">
-            El Cambio
+          <span className="inline-block px-4 py-2 bg-gradient-to-r from-[#10182b]/10 to-[#405687]/10 text-[#10182b] rounded-full font-semibold mb-4">
+            El Problema y La Solución
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-            Antes vs <span className="bg-gradient-to-r from-[#6f1794] to-[#000080] bg-clip-text text-transparent">Después</span>
+            Modelo Tradicional vs <span className="bg-gradient-to-r from-[#10182b] to-[#405687] bg-clip-text text-transparent">FAIRPAY</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Transforma tu gestión de talento humano con tecnología inteligente
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            FAIRPAY transforma la gestión salarial de diagnósticos ocasionales a inteligencia salarial continua.
           </p>
         </motion.div>
 
@@ -99,7 +103,7 @@ export function BeforeAfter() {
                 <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
                   <X className="w-6 h-6 text-red-500" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">Antes</h3>
+                <h3 className="text-2xl font-bold text-gray-900">Modelo Tradicional</h3>
               </div>
               <div className="space-y-4">
                 {beforeItems.map((item, index) => (
@@ -127,12 +131,12 @@ export function BeforeAfter() {
           >
             <div className="bg-gradient-to-br from-purple-50 via-blue-50 to-orange-50 rounded-3xl p-8 border border-purple-200 shadow-xl">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#6f1794] to-[#000080] rounded-xl flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#10182b] to-[#405687] rounded-xl flex items-center justify-center">
                   <Zap className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900">Después</h3>
-                  <p className="text-sm text-[#6f1794] font-semibold">con Fairpay</p>
+                  <p className="text-sm text-[#10182b] font-semibold">con Fairpay</p>
                 </div>
               </div>
               <div className="space-y-4">
@@ -156,9 +160,9 @@ export function BeforeAfter() {
               initial={{ scale: 0, rotate: -45 }}
               animate={isInView ? { scale: 1, rotate: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.8 }}
-              className="absolute -top-4 -right-4 bg-gradient-to-r from-[#ff7f27] to-[#6f1794] text-white px-4 py-2 rounded-full font-bold shadow-lg"
+              className="absolute -top-4 -right-4 bg-[#10182b] text-white px-4 py-2 rounded-full font-bold shadow-lg"
             >
-              Con tecnología IA
+              Potenciado por IA
             </motion.div>
           </motion.div>
         </div>
@@ -175,7 +179,7 @@ export function BeforeAfter() {
           </p>
           <a
             href="#demo"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-[#ff7f27] text-white rounded-full font-semibold hover:bg-[#e66d1f] hover:shadow-xl transition-all duration-300 hover:scale-105"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-[#a8d9fa] text-[#10182b] rounded-full font-semibold hover:bg-[#7bc3f2] hover:shadow-xl transition-all duration-300 hover:scale-105"
           >
             Comenzar ahora
           </a>

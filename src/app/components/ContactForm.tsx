@@ -37,9 +37,9 @@ export function ContactForm() {
     <section id="contacto" ref={ref} className="py-24 bg-gradient-to-b from-white via-gray-50 to-white relative overflow-hidden">
       {/* Background Decoration */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#6f1794]/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#ff7f27]/5 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#000080]/3 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#10182b]/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#a8d9fa]/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#405687]/3 rounded-full blur-3xl" />
       </div>
 
       {/* Floating decorative elements */}
@@ -54,7 +54,7 @@ export function ContactForm() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute top-20 left-10 w-20 h-20 rounded-2xl bg-gradient-to-br from-[#6f1794]/10 to-[#ff7f27]/10 backdrop-blur-sm border border-[#6f1794]/20"
+          className="absolute top-20 left-10 w-20 h-20 rounded-2xl bg-gradient-to-br from-[#10182b]/10 to-[#a8d9fa]/10 backdrop-blur-sm border border-[#10182b]/20"
         />
         <motion.div
           animate={{
@@ -66,7 +66,7 @@ export function ContactForm() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute top-40 right-20 w-16 h-16 rounded-full bg-gradient-to-br from-[#ff7f27]/10 to-[#000080]/10 backdrop-blur-sm border border-[#ff7f27]/20"
+          className="absolute top-40 right-20 w-16 h-16 rounded-full bg-gradient-to-br from-[#a8d9fa]/10 to-[#405687]/10 backdrop-blur-sm border border-[#a8d9fa]/20"
         />
         <motion.div
           animate={{
@@ -78,7 +78,7 @@ export function ContactForm() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute bottom-32 left-1/4 w-12 h-12 rounded-xl bg-gradient-to-br from-[#000080]/10 to-[#6f1794]/10 backdrop-blur-sm border border-[#000080]/20"
+          className="absolute bottom-32 left-1/4 w-12 h-12 rounded-xl bg-gradient-to-br from-[#405687]/10 to-[#10182b]/10 backdrop-blur-sm border border-[#405687]/20"
         />
         <motion.div
           animate={{
@@ -90,7 +90,7 @@ export function ContactForm() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute bottom-20 right-1/3 w-24 h-24 rounded-3xl bg-gradient-to-br from-[#6f1794]/5 to-[#ff7f27]/5 backdrop-blur-sm border border-purple-200/30"
+          className="absolute bottom-20 right-1/3 w-24 h-24 rounded-3xl bg-gradient-to-br from-[#10182b]/5 to-[#a8d9fa]/5 backdrop-blur-sm border border-blue-200/30"
         />
       </div>
 
@@ -102,12 +102,12 @@ export function ContactForm() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-2 bg-gradient-to-r from-[#6f1794]/10 to-[#ff7f27]/10 text-[#6f1794] rounded-full font-semibold mb-4">
+          <span className="inline-block px-4 py-2 bg-gradient-to-r from-[#10182b]/10 to-[#a8d9fa]/10 text-[#10182b] rounded-full font-semibold mb-4">
             Contáctanos
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
             Transforma tu{" "}
-            <span className="bg-gradient-to-r from-[#6f1794] via-[#000080] to-[#ff7f27] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#10182b] via-[#405687] to-[#a8d9fa] bg-clip-text text-transparent">
               gestión salarial
             </span>
           </h2>
@@ -144,7 +144,7 @@ export function ContactForm() {
                     transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                     className="flex items-start gap-3"
                   >
-                    <div className="w-6 h-6 rounded-full bg-gradient-to-r from-[#6f1794] to-[#ff7f27] flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-6 h-6 rounded-full bg-gradient-to-r from-[#10182b] to-[#a8d9fa] flex items-center justify-center flex-shrink-0 mt-0.5">
                       <CheckCircle className="w-4 h-4 text-white" />
                     </div>
                     <span className="text-gray-700">{item}</span>
@@ -161,19 +161,19 @@ export function ContactForm() {
               className="space-y-4"
             >
               <div className="flex items-center gap-4 p-4 bg-white/70 backdrop-blur-xl rounded-2xl border border-gray-200/50 shadow-lg">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#6f1794] to-[#000080] rounded-xl flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#10182b] to-[#405687] rounded-xl flex items-center justify-center">
                   <Mail className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <p className="text-sm text-gray-600 font-medium">Email</p>
-                  <a href="mailto:contacto@consultus.pe" className="text-gray-900 font-semibold hover:text-[#6f1794] transition-colors">
+                  <a href="mailto:contacto@consultus.pe" className="text-gray-900 font-semibold hover:text-[#10182b] transition-colors">
                     contacto@consultus.pe
                   </a>
                 </div>
               </div>
 
               <div className="flex items-center gap-4 p-4 bg-white/70 backdrop-blur-xl rounded-2xl border border-gray-200/50 shadow-lg">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#ff7f27] to-[#6f1794] rounded-xl flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#a8d9fa] to-[#10182b] rounded-xl flex items-center justify-center">
                   <Building2 className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -207,7 +207,7 @@ export function ContactForm() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full pl-12 pr-4 py-3 bg-white border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6f1794] focus:border-transparent transition-all"
+                        className="w-full pl-12 pr-4 py-3 bg-white border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#10182b] focus:border-transparent transition-all"
                         placeholder="Juan Pérez"
                       />
                     </div>
@@ -227,7 +227,7 @@ export function ContactForm() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full pl-12 pr-4 py-3 bg-white border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6f1794] focus:border-transparent transition-all"
+                        className="w-full pl-12 pr-4 py-3 bg-white border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#10182b] focus:border-transparent transition-all"
                         placeholder="juan.perez@empresa.com"
                       />
                     </div>
@@ -248,7 +248,7 @@ export function ContactForm() {
                           value={formData.company}
                           onChange={handleChange}
                           required
-                          className="w-full pl-12 pr-4 py-3 bg-white border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6f1794] focus:border-transparent transition-all"
+                          className="w-full pl-12 pr-4 py-3 bg-white border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#10182b] focus:border-transparent transition-all"
                           placeholder="Mi Empresa"
                         />
                       </div>
@@ -267,7 +267,7 @@ export function ContactForm() {
                           value={formData.phone}
                           onChange={handleChange}
                           required
-                          className="w-full pl-12 pr-4 py-3 bg-white border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6f1794] focus:border-transparent transition-all"
+                          className="w-full pl-12 pr-4 py-3 bg-white border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#10182b] focus:border-transparent transition-all"
                           placeholder="+51 999 999 999"
                         />
                       </div>
@@ -288,7 +288,7 @@ export function ContactForm() {
                         onChange={handleChange}
                         required
                         rows={4}
-                        className="w-full pl-12 pr-4 py-3 bg-white border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6f1794] focus:border-transparent transition-all resize-none"
+                        className="w-full pl-12 pr-4 py-3 bg-white border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#10182b] focus:border-transparent transition-all resize-none"
                         placeholder="Cuéntanos sobre tus necesidades..."
                       />
                     </div>
@@ -297,7 +297,7 @@ export function ContactForm() {
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-[#ff7f27] text-white rounded-xl font-semibold hover:bg-[#e66d1f] hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"
+                    className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-[#a8d9fa] text-[#10182b] rounded-xl font-semibold hover:bg-[#7bc3f2] hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"
                   >
                     Enviar mensaje
                     <Send className="w-5 h-5" />
@@ -309,7 +309,7 @@ export function ContactForm() {
                   animate={{ opacity: 1, scale: 1 }}
                   className="text-center py-12"
                 >
-                  <div className="w-20 h-20 bg-gradient-to-br from-[#6f1794] to-[#ff7f27] rounded-full flex items-center justify-center mx-auto mb-6">
+                  <div className="w-20 h-20 bg-gradient-to-br from-[#10182b] to-[#a8d9fa] rounded-full flex items-center justify-center mx-auto mb-6">
                     <CheckCircle className="w-10 h-10 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">
