@@ -20,8 +20,8 @@ export function Pricing() {
         { name: "Equidad y Competitividad", price: 1045.0 },
         { name: "Estructuras Salariales (Completo)", price: 1292.5 },
       ],
-      color: "from-[#6f1794] to-[#000080]",
-      bgColor: "from-purple-50 to-blue-50",
+      color: "from-[#10182b] to-[#405687]",
+      bgColor: "from-blue-100/70 to-indigo-100/70",
     },
     {
       icon: Users,
@@ -35,8 +35,8 @@ export function Pricing() {
         { name: "Equidad y Competitividad", price: 3344.0 },
         { name: "Estructuras Salariales (Completo)", price: 4136.0 },
       ],
-      color: "from-[#ff7f27] to-[#6f1794]",
-      bgColor: "from-orange-50 to-purple-50",
+      color: "from-[#a8d9fa] to-[#10182b]",
+      bgColor: "from-cyan-100/70 to-blue-100/70",
     },
     {
       icon: Building,
@@ -50,8 +50,8 @@ export function Pricing() {
         { name: "Equidad y Competitividad", price: 6270.0 },
         { name: "Estructuras Salariales (Completo)", price: 7755.0 },
       ],
-      color: "from-[#000080] to-[#6f1794]",
-      bgColor: "from-blue-50 to-purple-50",
+      color: "from-[#405687] to-[#10182b]",
+      bgColor: "from-indigo-100/70 to-blue-100/70",
     },
     {
       icon: Rocket,
@@ -65,8 +65,8 @@ export function Pricing() {
         { name: "Equidad y Competitividad", price: 10450.0 },
         { name: "Estructuras Salariales (Completo)", price: 12925.0 },
       ],
-      color: "from-[#6f1794] to-[#ff7f27]",
-      bgColor: "from-purple-50 to-orange-50",
+      color: "from-[#10182b] to-[#a8d9fa]",
+      bgColor: "from-blue-50 to-cyan-50",
     },
   ];
 
@@ -74,9 +74,9 @@ export function Pricing() {
     <section id="precios" ref={ref} className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
       {/* Background Decoration */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-[#6f1794]/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#ff7f27]/5 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#000080]/3 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-0 w-96 h-96 bg-[#10182b]/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#a8d9fa]/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#405687]/3 rounded-full blur-3xl" />
       </div>
 
       {/* Floating decorative elements */}
@@ -91,7 +91,7 @@ export function Pricing() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute top-24 left-20 w-16 h-16 rounded-2xl bg-gradient-to-br from-[#6f1794]/10 to-transparent backdrop-blur-sm border border-purple-200/30"
+          className="absolute top-24 left-20 w-16 h-16 rounded-2xl bg-gradient-to-br from-[#10182b]/10 to-transparent backdrop-blur-sm border border-blue-200/30"
         />
         <motion.div
           animate={{
@@ -103,7 +103,7 @@ export function Pricing() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute top-1/3 right-12 w-20 h-20 rounded-full bg-gradient-to-br from-[#ff7f27]/10 to-transparent backdrop-blur-sm border border-orange-200/30"
+          className="absolute top-1/3 right-12 w-20 h-20 rounded-full bg-gradient-to-br from-[#a8d9fa]/10 to-transparent backdrop-blur-sm border border-cyan-200/30"
         />
         <motion.div
           animate={{
@@ -115,7 +115,7 @@ export function Pricing() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute bottom-1/4 left-1/4 w-24 h-24 rounded-3xl bg-gradient-to-br from-[#000080]/8 to-transparent backdrop-blur-sm border border-blue-200/30"
+          className="absolute bottom-1/4 left-1/4 w-24 h-24 rounded-3xl bg-gradient-to-br from-[#405687]/8 to-transparent backdrop-blur-sm border border-blue-200/30"
         />
       </div>
 
@@ -127,12 +127,12 @@ export function Pricing() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-2 bg-gradient-to-r from-[#6f1794]/10 to-[#ff7f27]/10 text-[#6f1794] rounded-full font-semibold mb-4">
+          <span className="inline-block px-4 py-2 bg-gradient-to-r from-[#10182b]/10 to-[#a8d9fa]/10 text-[#10182b] rounded-full font-semibold mb-4">
             Precios Flexibles
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
             Planes diseñados para{" "}
-            <span className="bg-gradient-to-r from-[#6f1794] via-[#000080] to-[#ff7f27] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#10182b] via-[#405687] to-[#a8d9fa] bg-clip-text text-transparent">
               tu organización
             </span>
           </h2>
@@ -154,7 +154,7 @@ export function Pricing() {
               {/* Popular Badge */}
               {plan.popular && (
                 <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 z-10">
-                  <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#ff7f27] to-[#6f1794] text-white rounded-full shadow-xl text-sm font-bold">
+                  <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#a8d9fa] to-[#10182b] text-white rounded-full shadow-xl text-sm font-bold">
                     <Star className="w-4 h-4 fill-current" />
                     Más Popular
                   </div>
@@ -164,7 +164,7 @@ export function Pricing() {
               {/* Card */}
               <div
                 className={`h-full bg-gradient-to-br ${plan.bgColor} rounded-3xl p-8 border-2 ${
-                  plan.popular ? "border-[#ff7f27]" : "border-gray-200"
+                  plan.popular ? "border-[#a8d9fa]" : "border-gray-200"
                 } shadow-lg hover:shadow-2xl transition-all duration-500 ${
                   plan.popular ? "scale-105" : "hover:-translate-y-2"
                 }`}
@@ -214,7 +214,7 @@ export function Pricing() {
                   href="#contacto"
                   className={`w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r ${plan.color} text-white rounded-xl font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105 group`}
                 >
-                  Solicitar cotización
+                  Cotizar
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
@@ -230,7 +230,7 @@ export function Pricing() {
           className="mt-16 text-center"
         >
           <div className="inline-flex flex-col sm:flex-row items-center gap-6 p-8 bg-white/70 backdrop-blur-xl rounded-3xl border border-gray-200/50 shadow-xl">
-            <div className="w-16 h-16 bg-gradient-to-br from-[#6f1794] to-[#ff7f27] rounded-2xl flex items-center justify-center flex-shrink-0">
+            <div className="w-16 h-16 bg-gradient-to-br from-[#10182b] to-[#a8d9fa] rounded-2xl flex items-center justify-center flex-shrink-0">
               <Star className="w-8 h-8 text-white" />
             </div>
             <div className="text-center sm:text-left">
@@ -241,7 +241,7 @@ export function Pricing() {
             </div>
             <a
               href="#contacto"
-              className="px-8 py-3 bg-[#ff7f27] text-white rounded-full font-semibold hover:bg-[#e66d1f] hover:shadow-xl transition-all duration-300 whitespace-nowrap"
+              className="px-8 py-3 bg-[#a8d9fa] text-[#10182b] rounded-full font-semibold hover:bg-[#7bc3f2] hover:shadow-xl transition-all duration-300 whitespace-nowrap"
             >
               Contactar
             </a>

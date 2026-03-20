@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
-import { useInView } from "motion/react";
+import { useInView, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
-import { Database, Users, FileText, Scale, TrendingUp, DollarSign, ArrowRight, FileSpreadsheet, Briefcase, Clock, Rocket } from "lucide-react";
+import { FileText, Scale, TrendingUp, DollarSign, ArrowRight, FileSpreadsheet, Briefcase, Clock, Rocket, BarChart3 } from "lucide-react";
 
 export function TechModules() {
   const ref = useRef(null);
@@ -9,59 +9,19 @@ export function TechModules() {
   const roadmapRef = useRef(null);
   const isRoadmapInView = useInView(roadmapRef, { once: true, margin: "-100px" });
 
+  // Parallax effect
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"]
+  });
+  const y = useTransform(scrollYProgress, [0, 1], ["10%", "-10%"]);
+
   const modules = [
     {
-      icon: Database,
-      title: "Fundamentos Bases de Datos",
-      description: "Base de datos dinámica integral con datos que pueden ser usados de forma flexible en todo el sistema.",
-      features: [
-        "Grupos ocupacionales y familia de puestos",
-        "Niveles educativos y especializaciones",
-        "Competencias y factores de valoración",
-        "Diccionario de funciones y verbos",
-        "Régimen laboral y clasificación de puestos",
-      ],
-      color: "from-[#6f1794] to-[#000080]",
-      iconBg: "bg-purple-100",
-      iconColor: "text-[#6f1794]",
-      available: true,
-    },
-    {
-      icon: Briefcase,
-      title: "Estructura y Puestos",
-      description: "Gestión completa de la estructura organizacional con organigramas dinámicos.",
-      features: [
-        "Gestión de departamentos",
-        "Administración de puestos",
-        "Organigramas básicos y complementarios",
-        "Jerarquías automáticas",
-        "Visualización interactiva",
-      ],
-      color: "from-[#000080] to-[#6f1794]",
-      iconBg: "bg-blue-100",
-      iconColor: "text-[#000080]",
-      available: true,
-    },
-    {
-      icon: Users,
-      title: "Trabajadores",
-      description: "Centralización de información personal y laboral del capital humano.",
-      features: [
-        "Data personal completa",
-        "Información laboral actualizada",
-        "Historial de puestos",
-        "Seguimiento de movimientos",
-        "Gestión de documentación",
-      ],
-      color: "from-[#ff7f27] to-[#6f1794]",
-      iconBg: "bg-orange-100",
-      iconColor: "text-[#ff7f27]",
-      available: true,
-    },
-    {
       icon: FileText,
-      title: "Descripción y Perfiles",
-      description: "Creación detallada de descripciones de puestos con flujo interactivo.",
+      name: "FAIRPAY Job",
+      title: "Descripción y Perfiles de Puestos",
+      description: "Creación detallada de descripciones de puestos con flujo interactivo y perfiles de competencias.",
       features: [
         "Definición de misión del puesto",
         "Descripción de funciones",
@@ -69,15 +29,16 @@ export function TechModules() {
         "Requisitos del puesto",
         "Flujo interactivo de creación",
       ],
-      color: "from-[#6f1794] to-[#ff7f27]",
-      iconBg: "bg-purple-100",
-      iconColor: "text-[#6f1794]",
+      color: "from-[#10182b] to-[#405687]",
+      iconBg: "bg-blue-100",
+      iconColor: "text-[#10182b]",
       available: true,
     },
     {
       icon: Scale,
-      title: "Valoración y Categorización",
-      description: "Sistema integral de valoración de puestos con matrices automáticas.",
+      name: "FAIRPAY Value",
+      title: "Valoración y Categorización de Puestos",
+      description: "Sistema integral de valoración de puestos con matrices automáticas y categorización inteligente.",
       features: [
         "Manual de valoración de puestos",
         "Valoración automatizada",
@@ -85,31 +46,50 @@ export function TechModules() {
         "Matriz de valoración y categorización",
         "Análisis comparativo",
       ],
-      color: "from-[#000080] to-[#ff7f27]",
+      color: "from-[#405687] to-[#10182b]",
       iconBg: "bg-indigo-100",
-      iconColor: "text-[#000080]",
+      iconColor: "text-[#405687]",
       available: true,
     },
     {
       icon: TrendingUp,
-      title: "Equidad Interna y Competitividad",
-      description: "Análisis avanzado de equidad salarial y competitividad con IA.",
+      name: "FAIRPAY Equity",
+      title: "Análisis de Equidad Salarial Interna",
+      description: "Análisis avanzado de equidad salarial interna con matrices, gráficos y análisis predictivo.",
       features: [
         "Promedios salariales por categoría",
         "Matriz y gráficos de equidad interna",
+        "Análisis de brechas salariales",
+        "Identificación de inequidades",
+        "Reportes de equidad",
+      ],
+      color: "from-[#10182b] to-[#a8d9fa]",
+      iconBg: "bg-blue-100",
+      iconColor: "text-[#10182b]",
+      available: true,
+    },
+    {
+      icon: BarChart3,
+      name: "FAIRPAY Market",
+      title: "Competitividad Salarial frente al Mercado",
+      description: "Análisis de competitividad salarial con inteligencia artificial y data de encuestas del mercado.",
+      features: [
         "Data de encuestas salariales (IA)",
         "Matriz y gráficos de competitividad",
-        "Análisis predictivo",
+        "Comparación con el mercado",
+        "Análisis de posicionamiento",
+        "Benchmarking salarial",
       ],
-      color: "from-[#6f1794] to-[#000080]",
-      iconBg: "bg-purple-100",
-      iconColor: "text-[#6f1794]",
+      color: "from-[#405687] to-[#a8d9fa]",
+      iconBg: "bg-cyan-100",
+      iconColor: "text-[#405687]",
       available: true,
     },
     {
       icon: DollarSign,
-      title: "Estructura Salarial",
-      description: "Diseño de estructuras salariales con proyección de costos de implementación.",
+      name: "FAIRPAY Structure",
+      title: "Diseño de Estructuras Salariales",
+      description: "Diseño de estructuras salariales inteligentes con proyección de costos y simulaciones.",
       features: [
         "Diseño Broadbanding",
         "Costo de implementación",
@@ -117,9 +97,9 @@ export function TechModules() {
         "Proyecciones financieras",
         "Análisis de impacto presupuestal",
       ],
-      color: "from-[#ff7f27] to-[#6f1794]",
-      iconBg: "bg-orange-100",
-      iconColor: "text-[#ff7f27]",
+      color: "from-[#a8d9fa] to-[#10182b]",
+      iconBg: "bg-cyan-100",
+      iconColor: "text-[#a8d9fa]",
       available: true,
     },
   ];
@@ -127,52 +107,49 @@ export function TechModules() {
   const upcomingFeatures = [
     {
       icon: FileSpreadsheet,
-      title: "Exportación de Estructuras Salariales",
-      description: "Exporta tus estructuras salariales en múltiples formatos para integración con otros sistemas empresariales.",
+      title: "Incorporación de estructuras salariales",
+      description: "Permite cargar estructuras salariales existentes para integrarlas a FAIRPAY y aprovechar plenamente los módulos de análisis, equidad interna, presupuesto de personal y planificación organizacional.\n\nEsta funcionalidad facilita la migración de estructuras salariales previamente diseñadas y su gestión dentro de la plataforma.",
       status: "En desarrollo",
     },
     {
       icon: Briefcase,
       title: "Presupuesto de Personal por Áreas",
-      description: "Gestión completa del presupuesto con análisis de presupuesto aprobado vs ejecutado, control de puestos asignados y vacantes.",
+      description: "Gestiona de forma integral el presupuesto de personal y monitorea la ejecución presupuestal de tu organización con herramientas de análisis y control en tiempo real.",
       status: "En desarrollo",
       features: [
-        "Presupuesto aprobado vs ejecutado",
-        "N° y costo de puestos asignados",
-        "N° y costo de puestos vacantes",
-        "Proyecciones presupuestales",
+        "Presupuesto aprobado vs. ejecutado - Seguimiento de la ejecución del presupuesto de personal por áreas.",
+        "Número y costo de puestos asignados - Control de los puestos ocupados y su impacto presupuestal.",
+        "Número y costo de puestos vacantes - Identificación del presupuesto disponible asociado a vacantes.",
+        "Proyecciones presupuestales - Estimaciones del gasto futuro en personal para apoyar la planificación organizacional.",
       ],
     },
   ];
 
   return (
-    <section id="modulos" className="py-24 bg-gradient-to-b from-white via-gray-50 to-white relative overflow-hidden">
+    <section ref={ref} id="modulos" className="relative py-24 bg-gradient-to-b from-slate-50 via-blue-50/30 to-cyan-50/40 overflow-hidden">
       {/* Background Decoration */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-0 w-96 h-96 bg-[#6f1794]/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-[#ff7f27]/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-0 w-96 h-96 bg-[#10182b]/15 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-[#a8d9fa]/20 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#405687]/10 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <motion.div
-          ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-2 bg-gradient-to-r from-[#6f1794]/10 to-[#000080]/10 text-[#6f1794] rounded-full font-semibold mb-4">
-            Módulos Técnicos
+          <span className="inline-block px-4 py-2 bg-gradient-to-r from-[#10182b]/10 to-[#405687]/10 text-[#10182b] rounded-full font-semibold mb-4">
+            FAIRPAY Suite
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-            Potencia tu gestión con{" "}
-            <span className="bg-gradient-to-r from-[#6f1794] via-[#000080] to-[#ff7f27] bg-clip-text text-transparent">
-              tecnología inteligente
-            </span>
+            Plataforma integral de arquitectura del talento y estructuras salariales
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Sistema integral de gestión salarial con módulos diseñados para optimizar cada aspecto de tu organización
+            Todo en una única plataforma SaaS diseñada para estructurar la organización, gestionar puestos y construir sistemas salariales justos, equitativos y competitivos.
           </p>
         </motion.div>
 
@@ -194,6 +171,13 @@ export function TechModules() {
                     <module.icon className={`w-8 h-8 ${module.iconColor}`} />
                   </div>
                   <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${module.color}`} />
+                </div>
+
+                {/* Module Name Badge */}
+                <div className="mb-3">
+                  <span className={`inline-block text-xs font-bold px-3 py-1 rounded-full bg-gradient-to-r ${module.color} text-white`}>
+                    {module.name}
+                  </span>
                 </div>
 
                 {/* Title & Description */}
@@ -220,14 +204,8 @@ export function TechModules() {
                   ))}
                 </ul>
 
-                {/* Hover Effect - Learn More */}
-                <div className="flex items-center gap-2 text-transparent bg-gradient-to-r from-[#6f1794] to-[#000080] bg-clip-text font-semibold group-hover:gap-4 transition-all duration-300 text-sm">
-                  Conocer más
-                  <ArrowRight className="w-4 h-4 text-[#6f1794] opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
-
                 {/* Glassmorphism overlay on hover */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#6f1794]/5 to-[#000080]/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#10182b]/5 to-[#405687]/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
               </div>
             </motion.div>
           ))}
@@ -249,18 +227,18 @@ export function TechModules() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#ff7f27]/10 to-[#6f1794]/10 text-[#ff7f27] rounded-full font-semibold mb-4">
-              <Rocket className="w-4 h-4" />
-              <span>Próximamente</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#a8d9fa]/10 to-[#10182b]/10 text-[#a8d9fa] rounded-full font-semibold mb-4">
+              <Rocket className="w-4 h-4 text-gray-900" />
+              <span className="text-[#85b2d0] text-[#87b0cc] text-[#829cae] text-[#444545] text-[#000000] text-[#000000] text-[#000000] text-[#000000] text-[#000000] text-[#000000] text-[#000000]">Próximamente</span>
             </div>
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
               Innovación{" "}
-              <span className="bg-gradient-to-r from-[#6f1794] to-[#ff7f27] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#10182b] to-[#a8d9fa] bg-clip-text text-transparent">
                 continua
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Nuevas funcionalidades en desarrollo para potenciar tu gestión de talento
+              Nuevas funcionalidades para fortalecer la gestión estratégica del talento
             </p>
           </motion.div>
 
@@ -274,18 +252,18 @@ export function TechModules() {
                 transition={{ duration: 0.6, delay: 0.2 + index * 0.2 }}
                 className="relative group"
               >
-                <div className="h-full bg-white/70 backdrop-blur-xl rounded-3xl p-8 border border-dashed border-gray-300 hover:border-[#6f1794] transition-all duration-500 shadow-lg hover:shadow-xl">
+                <div className="h-full bg-white/70 backdrop-blur-xl rounded-3xl p-8 border border-dashed border-gray-300 hover:border-[#10182b] transition-all duration-500 shadow-lg hover:shadow-xl">
                   {/* Status Badge */}
                   <div className="absolute -top-4 right-8">
-                    <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#ff7f27] to-[#6f1794] text-white rounded-full shadow-lg text-sm font-semibold">
+                    <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#a8d9fa] to-[#10182b] text-white rounded-full shadow-lg text-sm font-semibold">
                       <Clock className="w-4 h-4" />
                       {feature.status}
                     </div>
                   </div>
 
                   {/* Icon */}
-                  <div className="w-14 h-14 bg-gradient-to-br from-[#6f1794]/10 to-[#ff7f27]/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <feature.icon className="w-7 h-7 text-[#6f1794]" />
+                  <div className="w-14 h-14 bg-gradient-to-br from-[#10182b]/10 to-[#a8d9fa]/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className="w-7 h-7 text-[#10182b]" />
                   </div>
 
                   {/* Content */}
@@ -301,7 +279,7 @@ export function TechModules() {
                     <ul className="space-y-2 mb-6">
                       {feature.features.map((item, idx) => (
                         <li key={idx} className="flex items-start gap-2">
-                          <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#ff7f27] to-[#6f1794] flex-shrink-0 mt-1.5" />
+                          <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#a8d9fa] to-[#10182b] flex-shrink-0 mt-1.5" />
                           <span className="text-gray-700 text-sm">{item}</span>
                         </li>
                       ))}
@@ -315,7 +293,7 @@ export function TechModules() {
                         initial={{ width: 0 }}
                         animate={isRoadmapInView ? { width: "60%" } : {}}
                         transition={{ duration: 1.5, delay: 0.5 + index * 0.2 }}
-                        className="h-full bg-gradient-to-r from-[#6f1794] to-[#ff7f27] rounded-full"
+                        className="h-full bg-gradient-to-r from-[#10182b] to-[#a8d9fa] rounded-full"
                       />
                     </div>
                     <p className="text-xs text-gray-500 mt-2">En desarrollo activo</p>
@@ -332,27 +310,18 @@ export function TechModules() {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="mt-16 max-w-3xl mx-auto"
           >
-            <div className="bg-gradient-to-r from-[#6f1794]/5 via-[#000080]/5 to-[#ff7f27]/5 rounded-3xl p-8 border border-purple-200/50 backdrop-blur-xl">
-              <div className="flex flex-col md:flex-row items-center gap-6">
+            <div className="bg-gradient-to-r from-[#10182b]/5 via-[#405687]/5 to-[#a8d9fa]/5 rounded-3xl p-8 border border-blue-200/50 backdrop-blur-xl">
+              <div className="flex items-center gap-6">
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#6f1794] to-[#ff7f27] rounded-2xl flex items-center justify-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-[#10182b] to-[#a8d9fa] rounded-2xl flex items-center justify-center">
                     <Rocket className="w-8 h-8 text-white" />
                   </div>
                 </div>
-                <div className="flex-1 text-center md:text-left">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    ¿Tienes una sugerencia?
-                  </h3>
-                  <p className="text-gray-600">
-                    Estamos constantemente innovando. Comparte tus ideas y ayúdanos a construir el futuro de la gestión salarial.
+                <div className="flex-1">
+                  <p className="text-gray-900 leading-relaxed">
+                    <span className="font-bold">FAIRPAY</span> evoluciona constantemente incorporando nuevas herramientas que amplían las capacidades de la plataforma y permiten a las organizaciones gestionar su arquitectura organizacional y salarial con mayor eficiencia, control y visión estratégica.
                   </p>
                 </div>
-                <a
-                  href="mailto:contacto@consultus.pe"
-                  className="px-6 py-3 bg-[#ff7f27] text-white rounded-full font-semibold hover:bg-[#e66d1f] hover:shadow-lg transition-all duration-300 whitespace-nowrap"
-                >
-                  Contactar
-                </a>
               </div>
             </div>
           </motion.div>

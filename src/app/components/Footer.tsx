@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
-import logoFairpay from "../../assets/logo-fairpay.png";
+import logoFairpay from "../../assets/LogoFairpay.svg";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -40,8 +40,8 @@ export function Footer() {
     <footer id="footer" className="bg-gradient-to-b from-gray-900 to-black text-white pt-20 pb-8 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#6f1794]/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#ff7f27]/10 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#10182b]/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#a8d9fa]/10 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -52,8 +52,8 @@ export function Footer() {
             <div className="mb-6">
               <img 
                 src={logoFairpay} 
-                alt="Fairpay Logo" 
-                className="h-12 w-auto"
+                alt="Fairpay Suite" 
+                className="h-32 w-auto"
               />
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
@@ -65,7 +65,7 @@ export function Footer() {
               <a
                 href="#"
                 aria-label="LinkedIn"
-                className="w-10 h-10 bg-white/5 backdrop-blur-xl rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-[#6f1794] hover:to-[#000080] transition-all duration-300 group"
+                className="w-10 h-10 bg-white/5 backdrop-blur-xl rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-[#10182b] hover:to-[#405687] transition-all duration-300 group"
               >
                 <svg className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
@@ -76,7 +76,7 @@ export function Footer() {
               <a
                 href="#"
                 aria-label="Facebook"
-                className="w-10 h-10 bg-white/5 backdrop-blur-xl rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-[#6f1794] hover:to-[#000080] transition-all duration-300 group"
+                className="w-10 h-10 bg-white/5 backdrop-blur-xl rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-[#10182b] hover:to-[#405687] transition-all duration-300 group"
               >
                 <svg className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
@@ -85,7 +85,7 @@ export function Footer() {
               <a
                 href="#"
                 aria-label="Instagram"
-                className="w-10 h-10 bg-white/5 backdrop-blur-xl rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-[#6f1794] hover:to-[#000080] transition-all duration-300 group"
+                className="w-10 h-10 bg-white/5 backdrop-blur-xl rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-[#10182b] hover:to-[#405687] transition-all duration-300 group"
               >
                 <svg className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -104,9 +104,9 @@ export function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-[#ff7f27] transition-colors duration-300 inline-flex items-center gap-2 group"
+                    className="text-gray-400 hover:text-[#a8d9fa] transition-colors duration-300 inline-flex items-center gap-2 group"
                   >
-                    <span className="w-1 h-1 bg-[#6f1794] rounded-full group-hover:w-2 transition-all" />
+                    <span className="w-1 h-1 bg-[#10182b] rounded-full group-hover:w-2 transition-all" />
                     {link.label}
                   </a>
                 </li>
@@ -121,7 +121,7 @@ export function Footer() {
               {locations.map((location) => (
                 <div key={location.name} className="text-gray-400">
                   <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-[#ff7f27] flex-shrink-0 mt-0.5" />
+                    <MapPin className="w-5 h-5 text-[#a8d9fa] flex-shrink-0 mt-0.5" />
                     <div>
                       <h4 className="font-semibold text-white mb-1">{location.name}</h4>
                       <p className="text-sm">{location.address}</p>
@@ -141,7 +141,7 @@ export function Footer() {
                 <li key={index}>
                   <a
                     href={contact.href}
-                    className="flex items-start gap-3 text-gray-400 hover:text-[#ff7f27] transition-colors duration-300 group"
+                    className="flex items-start gap-3 text-gray-400 hover:text-[#a8d9fa] transition-colors duration-300 group"
                   >
                     <contact.icon className="w-5 h-5 flex-shrink-0 mt-0.5" />
                     <span className="text-sm">{contact.text}</span>
@@ -154,7 +154,7 @@ export function Footer() {
             <div className="mt-8">
               <a
                 href="#demo"
-                className="inline-block px-6 py-3 bg-[#ff7f27] text-white rounded-full font-semibold hover:bg-[#e66d1f] hover:shadow-xl transition-all duration-300 hover:scale-105 text-sm"
+                className="inline-block px-6 py-3 bg-[#a8d9fa] text-[#10182b] rounded-full font-semibold hover:bg-[#7bc3f2] hover:shadow-xl transition-all duration-300 hover:scale-105 text-sm"
               >
                 Solicitar Demo
               </a>
@@ -171,10 +171,10 @@ export function Footer() {
             © {currentYear} Fairpay by Consultus. Todos los derechos reservados.
           </p>
           <div className="flex items-center gap-6">
-            <a href="#" className="hover:text-[#ff7f27] transition-colors">
+            <a href="#" className="hover:text-[#a8d9fa] transition-colors">
               Términos y Condiciones
             </a>
-            <a href="#" className="hover:text-[#ff7f27] transition-colors">
+            <a href="#" className="hover:text-[#a8d9fa] transition-colors">
               Política de Privacidad
             </a>
           </div>
