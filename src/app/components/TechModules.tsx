@@ -19,9 +19,9 @@ export function TechModules() {
   const modules = [
     {
       icon: FileText,
-      name: "FAIRPAY Job",
-      title: "Descripción y Perfiles de Puestos",
-      description: "Creación detallada de descripciones de puestos con flujo interactivo y perfiles de competencias.",
+      name: "FAIRPAY Graphics",
+      title: "Analíticas",
+      description: "Visualización de datos y análisis gráficos para la toma de decisiones estratégicas.",
       features: [
         "Definición de misión del puesto",
         "Descripción de funciones",
@@ -35,10 +35,10 @@ export function TechModules() {
       available: true,
     },
     {
-      icon: Scale,
-      name: "FAIRPAY Value",
-      title: "Valoración y Categorización de Puestos",
-      description: "Sistema integral de valoración de puestos con matrices automáticas y categorización inteligente.",
+      icon: FileText,
+      name: "FAIRPAY Areas and positions",
+      title: "Estructura Organizacional y Puestos",
+      description: "Gestión de la estructura organizacional y definición de puestos jerárquicos.",
       features: [
         "Manual de valoración de puestos",
         "Valoración automatizada",
@@ -52,10 +52,10 @@ export function TechModules() {
       available: true,
     },
     {
-      icon: TrendingUp,
-      name: "FAIRPAY Equity",
-      title: "Análisis de Equidad Salarial Interna",
-      description: "Análisis avanzado de equidad salarial interna con matrices, gráficos y análisis predictivo.",
+      icon: FileText,
+      name: "FAIRPAY Workers",
+      title: "Base de Datos de Trabajadores",
+      description: "Gestión centralizada de información de empleados y datos laborales.",
       features: [
         "Promedios salariales por categoría",
         "Matriz y gráficos de equidad interna",
@@ -69,10 +69,10 @@ export function TechModules() {
       available: true,
     },
     {
-      icon: BarChart3,
-      name: "FAIRPAY Market",
-      title: "Competitividad Salarial frente al Mercado",
-      description: "Análisis de competitividad salarial con inteligencia artificial y data de encuestas del mercado.",
+      icon: FileText,
+      name: "FAIRPAY Job profiles",
+      title: "Descripción de Perfiles",
+      description: "Definición detallada de perfiles de competencias y requisitos por puesto.",
       features: [
         "Data de encuestas salariales (IA)",
         "Matriz y gráficos de competitividad",
@@ -86,10 +86,10 @@ export function TechModules() {
       available: true,
     },
     {
-      icon: DollarSign,
-      name: "FAIRPAY Structure",
-      title: "Diseño de Estructuras Salariales",
-      description: "Diseño de estructuras salariales inteligentes con proyección de costos y simulaciones.",
+      icon: FileText,
+      name: "FAIRPAY Production Manager",
+      title: "Gerente de Producción",
+      description: "Herramientas especializadas para la gestión de producción y operaciones.",
       features: [
         "Diseño Broadbanding",
         "Costo de implementación",
