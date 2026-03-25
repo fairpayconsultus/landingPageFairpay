@@ -23,16 +23,16 @@ export function PlatformGallery() {
 
   const images = [
     { src: img1, title: "Dashboard General", module: "FAIRPAY Suite" },
-    { src: img2, title: "Analíticas", module: "FAIRPAY Equity" },
-    { src: img3, title: "Estructura Organizacional y Puestos", module: "FAIRPAY Job" },
-    { src: img4, title: "Base de Datos de Trabajadores", module: "FAIRPAY Job" },
-    { src: img5, title: "Descripción de Perfiles", module: "FAIRPAY Job" },
-    { src: img6, title: "Gerente de Producción", module: "FAIRPAY Structure" },
+    { src: img2, title: "Analíticas", module: "FAIRPAY Graphics" },
+    { src: img3, title: "Estructura Organizacional y Puestos", module: "FAIRPAY Areas and positions" },
+    { src: img4, title: "Base de Datos de Trabajadores", module: "FAIRPAY Workers" },
+    { src: img5, title: "Descripción de Perfiles", module: "FAIRPAY Job profiles" },
+    { src: img6, title: "Gerente de Producción", module: "FAIRPAY Production Manager" },
     { src: img7, title: "Valoración y Categorización", module: "FAIRPAY Value" },
-    { src: img8, title: "Equidad Interna", module: "FAIRPAY Equity" },
-    { src: img9, title: "Equidad Externa", module: "FAIRPAY Market" },
-    { src: img10, title: "Estructura Salarial", module: "FAIRPAY Structure" },
-    { src: img11, title: "Análisis", module: "FAIRPAY Market" },
+    { src: img8, title: "Equidad Interna", module: "FAIRPAY Salary Analysis" },
+    { src: img9, title: "Equidad Externa", module: "FAIRPAY Salary Market" },
+    { src: img10, title: "Estructura Salarial", module: "FAIRPAY Broadbandig" },
+    { src: img11, title: "Análisis", module: "FAIRPAY Salary Analysis" },
   ];
 
   const nextSlide = () => {
