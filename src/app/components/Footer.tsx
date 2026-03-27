@@ -23,7 +23,7 @@ export function Footer() {
   const contactInfo = [
     { icon: Mail, text: "contacto@consultus.pe", href: "mailto:contacto@consultus.pe" },
     { icon: Mail, text: "info@consultus.pe", href: "mailto:info@consultus.pe" },
-    { icon: Phone, text: "+51 1 988 450 127", href: "tel:+511988450127" },
+    { icon: Phone, text: "+51 988 456 999", href: "tel:+51988456999" },
   ];
 
   const quickLinks = [
