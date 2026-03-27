@@ -6,7 +6,7 @@ export function WhatsAppButton() {
   const [isHovered, setIsHovered] = useState(false);
 
   // Número de WhatsApp de ejemplo - Reemplazar con el número real
-  const whatsappNumber = "511988450127";
+  const whatsappNumber = "51988456999";
   const message = "Hola, me interesa conocer más sobre Fairpay";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
