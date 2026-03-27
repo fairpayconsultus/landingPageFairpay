@@ -49,11 +49,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <div className="mb-6">
+            <div className="mb-2">
               <img 
                 src={logoFairpay} 
                 alt="Fairpay Suite" 
-                className="h-12 w-auto"
+                className="h-32 w-auto"
               />
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">

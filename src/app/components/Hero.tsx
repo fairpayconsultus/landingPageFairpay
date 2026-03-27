@@ -86,7 +86,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight"
           >
             <span className="block text-gray-900">Transformamos la gestión del</span>
             <span className="block text-gray-900">talento en</span>
@@ -100,7 +100,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-xl sm:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed"
+            className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed"
           >
             FAIRPAY convierte los procesos clave de gestión del talento en información estratégica para diseñar y gestionar estructuras salariales justas, competitivas y alineadas con los objetivos de la organización.
           </motion.p>
@@ -110,14 +110,14 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.5 }}
-            className="pt-4"
+            className="pt-2"
           >
             <a
               href="#contacto"
-              className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#10182b] to-[#405687] text-white rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105"
+              className="group inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#10182b] to-[#405687] text-white rounded-full text-md font-semibold hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105"
             >
               Solicitar Demo
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
           </motion.div>
 
@@ -126,7 +126,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-3xl mx-auto pt-16"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-3xl mx-auto pt-8"
           >
             {[
               { value: "80%", label: "Reducción de tiempo" },
