@@ -178,7 +178,7 @@ export function BeforeAfter() {
             Únete a las empresas que ya están transformando su gestión de talento
           </p>
           <a
-            href="#demo"
+            href="#contacto"
             className="inline-flex items-center gap-2 px-8 py-4 bg-[#a8d9fa] text-[#10182b] rounded-full font-semibold hover:bg-[#7bc3f2] hover:shadow-xl transition-all duration-300 hover:scale-105"
           >
             Comenzar ahora

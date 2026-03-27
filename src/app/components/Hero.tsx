@@ -113,7 +113,7 @@ export function Hero() {
             className="pt-4"
           >
             <a
-              href="#demo"
+              href="#contacto"
               className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#10182b] to-[#405687] text-white rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105"
             >
               Solicitar Demo
