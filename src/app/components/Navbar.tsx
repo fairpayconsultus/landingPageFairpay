@@ -85,7 +85,7 @@ export function Navbar() {
               </a>
             ))}
             <a
-              href="#demo"
+              href="#contacto"
               onClick={() => setIsOpen(false)}
               className="block w-full text-center px-6 py-2.5 bg-gradient-to-r from-[#10182b] to-[#405687] text-white rounded-full font-medium"
             >

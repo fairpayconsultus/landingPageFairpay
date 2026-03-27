@@ -55,15 +55,18 @@ export function Pricing() {
     },
     {
       icon: Rocket,
-      name: "Plan 4",
+      name: "Plan Enterprise",
       range: "Más de 500 Puestos",
-      description: "Para corporaciones enterprise",
+      description: "Soluciones personalizadas para corporaciones",
       popular: false,
-      modules: [
-        { name: "Descripción de Puestos", price: 5500.0 },
-        { name: "Valoración y Categorización", price: 8800.0 },
-        { name: "Equidad y Competitividad", price: 10450.0 },
-        { name: "Estructuras Salariales (Completo)", price: 12925.0 },
+      customQuote: true,
+      features: [
+        "Todos los módulos incluidos",
+        "Implementación personalizada",
+        "Soporte prioritario 24/7",
+        "Integraciones a medida",
+        "Capacitación para equipos",
+        "Analytics avanzados",
       ],
       color: "from-[#10182b] to-[#a8d9fa]",
       bgColor: "from-blue-50 to-cyan-50",
@@ -149,13 +152,13 @@ export function Pricing() {
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 * index }}
-              className={`relative group ${plan.popular ? "lg:-mt-4" : ""}`}
+              className={`relative group ${plan.popular ? "" : ""}`}
             >
               {/* Popular Badge */}
               {plan.popular && (
-                <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 z-10">
-                  <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#a8d9fa] to-[#10182b] text-white rounded-full shadow-xl text-sm font-bold">
-                    <Star className="w-4 h-4 fill-current" />
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+                  <div className="flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-[#a8d9fa] to-[#10182b] text-white rounded-full shadow-lg text-xs font-bold">
+                    <Star className="w-3 h-3 fill-current" />
                     Más Popular
                   </div>
                 </div>
@@ -186,27 +189,48 @@ export function Pricing() {
                   <p className="text-sm text-gray-600">{plan.description}</p>
                 </div>
 
-                {/* Modules */}
+                {/* Modules or Features */}
                 <div className="space-y-4 mb-8">
-                  {plan.modules.map((module, idx) => (
-                    <motion.div
-                      key={idx}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={isInView ? { opacity: 1, x: 0 } : {}}
-                      transition={{ duration: 0.4, delay: 0.2 + index * 0.1 + idx * 0.1 }}
-                      className="bg-white/70 backdrop-blur-sm rounded-xl p-4 hover:shadow-md transition-shadow"
-                    >
-                      <div className="flex justify-between items-start gap-2 mb-2">
-                        <span className="text-sm font-medium text-gray-700 flex-1">{module.name}</span>
-                        <div className={`w-5 h-5 rounded-full bg-gradient-to-r ${plan.color} flex items-center justify-center flex-shrink-0`}>
-                          <Check className="w-3 h-3 text-white" />
+                  {plan.customQuote ? (
+                    // Custom Quote Plan - Show Features
+                    plan.features.map((feature, idx) => (
+                      <motion.div
+                        key={idx}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={isInView ? { opacity: 1, x: 0 } : {}}
+                        transition={{ duration: 0.4, delay: 0.2 + index * 0.1 + idx * 0.1 }}
+                        className="bg-white/70 backdrop-blur-sm rounded-xl p-4 hover:shadow-md transition-shadow"
+                      >
+                        <div className="flex items-start gap-3">
+                          <div className={`w-5 h-5 rounded-full bg-gradient-to-r ${plan.color} flex items-center justify-center flex-shrink-0 mt-0.5`}>
+                            <Check className="w-3 h-3 text-white" />
+                          </div>
+                          <span className="text-sm font-medium text-gray-700 leading-relaxed">{feature}</span>
                         </div>
-                      </div>
-                      <p className={`font-bold bg-gradient-to-r ${plan.color} bg-clip-text text-transparent`}>
-                        ${module.price.toLocaleString("en-US", { minimumFractionDigits: 2 })} USD
-                      </p>
-                    </motion.div>
-                  ))}
+                      </motion.div>
+                    ))
+                  ) : (
+                    // Regular Plans - Show Modules with Prices
+                    plan.modules.map((module, idx) => (
+                      <motion.div
+                        key={idx}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={isInView ? { opacity: 1, x: 0 } : {}}
+                        transition={{ duration: 0.4, delay: 0.2 + index * 0.1 + idx * 0.1 }}
+                        className="bg-white/70 backdrop-blur-sm rounded-xl p-4 hover:shadow-md transition-shadow"
+                      >
+                        <div className="flex justify-between items-start gap-2 mb-2">
+                          <span className="text-sm font-medium text-gray-700 flex-1">{module.name}</span>
+                          <div className={`w-5 h-5 rounded-full bg-gradient-to-r ${plan.color} flex items-center justify-center flex-shrink-0`}>
+                            <Check className="w-3 h-3 text-white" />
+                          </div>
+                        </div>
+                        <p className={`font-bold bg-gradient-to-r ${plan.color} bg-clip-text text-transparent`}>
+                          ${module.price.toLocaleString("en-US", { minimumFractionDigits: 2 })} USD
+                        </p>
+                      </motion.div>
+                    ))
+                  )}
                 </div>
 
                 {/* CTA Button */}
@@ -214,7 +238,7 @@ export function Pricing() {
                   href="#contacto"
                   className={`w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r ${plan.color} text-white rounded-xl font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105 group`}
                 >
-                  Cotizar
+                  {plan.customQuote ? "Solicitar Cotización" : "Cotizar"}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
