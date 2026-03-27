@@ -36,7 +36,7 @@ export function Navbar() {
               <img 
                 src={logoFairpay}
                 alt="Fairpay Suite" 
-                className="h-12 w-auto"
+                className="h-16 w-auto"
               />
             </a>
           </motion.div>
