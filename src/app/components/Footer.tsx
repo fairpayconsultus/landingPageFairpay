@@ -10,19 +10,18 @@ export function Footer() {
   const locations = [
     {
       name: "San Isidro",
-      address: "Av. República de Panamá 3535, San Isidro",
-      city: "Lima, Perú",
+      address: "Calle Los Jilgueros 185 int. 201. RES. El Palomar",
+      city: "San Isidro, Lima",
     },
     {
       name: "Miraflores",
-      address: "Av. José Pardo 620, Miraflores",
-      city: "Lima, Perú",
+      address: "Av. Mariscal la Mar 326 oficina 216 urbe. Santa Cruz",
+      city: "Miraflores, Lima",
     },
   ];
 
   const contactInfo = [
     { icon: Mail, text: "contacto@consultus.pe", href: "mailto:contacto@consultus.pe" },
-    { icon: Mail, text: "info@consultus.pe", href: "mailto:info@consultus.pe" },
     { icon: Phone, text: "+51 988 456 999", href: "tel:+51988456999" },
   ];
 

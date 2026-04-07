@@ -187,6 +187,18 @@ export function Pricing() {
                     {plan.range}
                   </p>
                   <p className="text-sm text-gray-600">{plan.description}</p>
+                  
+                  {/* Custom Quote Badge */}
+                  {plan.customQuote && (
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+                      <div className="flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full shadow-lg text-xs font-bold">
+                        <span className="w-3 h-3 bg-white rounded-full flex items-center justify-center">
+                          <span className="text-amber-500 text-xs font-bold">!</span>
+                        </span>
+                        Precio a consultar
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 {/* Modules or Features */}
