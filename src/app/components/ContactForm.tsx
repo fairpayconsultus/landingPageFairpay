@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Mail, Phone, Building2, User, MessageSquare, Send, CheckCircle } from "lucide-react";
 
 export function ContactForm() {
@@ -14,6 +14,37 @@ export function ContactForm() {
     phone: "",
     message: "",
   });
+
+  // Check for plan information on component mount and when custom event is fired
+  useEffect(() => {
+    console.log('Checking for plan info...');
+    const planInfo = sessionStorage.getItem('planInfo');
+    console.log('Plan info found:', planInfo);
+    if (planInfo) {
+      console.log('Setting plan info to message field');
+      setFormData(prev => ({
+        ...prev,
+        message: planInfo
+      }));
+      // Clear the session storage after using it
+      sessionStorage.removeItem('planInfo');
+    }
+
+    // Listen for custom event
+    const handlePlanInfoUpdate = (event: any) => {
+      console.log('Custom event received:', event.detail);
+      setFormData(prev => ({
+        ...prev,
+        message: event.detail
+      }));
+    };
+
+    window.addEventListener('planInfoUpdated', handlePlanInfoUpdate);
+    
+    return () => {
+      window.removeEventListener('planInfoUpdated', handlePlanInfoUpdate);
+    };
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -287,8 +318,8 @@ export function ContactForm() {
                         value={formData.message}
                         onChange={handleChange}
                         required
-                        rows={4}
-                        className="w-full pl-12 pr-4 py-3 bg-white border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#10182b] focus:border-transparent transition-all resize-none"
+                        rows={8}
+                        className="w-full pl-12 pr-4 py-3 bg-white border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#10182b] focus:border-transparent transition-all resize-none text-sm"
                         placeholder="Cuéntanos sobre tus necesidades..."
                       />
                     </div>
