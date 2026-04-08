@@ -88,7 +88,7 @@ export function TechModules() {
     {
       icon: FileText,
       name: "FAIRPAY Structure",
-      title: "Gerente de Producción",
+      title: "Estructuras salariales",
       description: "Herramientas especializadas para la gestión de producción y operaciones.",
       features: [
         "Diseño Broadbanding",
