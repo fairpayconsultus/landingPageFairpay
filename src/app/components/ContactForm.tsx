@@ -53,15 +53,40 @@ export function ContactForm() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Aquí iría la lógica de envío del formulario
-    console.log("Form submitted:", formData);
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: "", email: "", company: "", phone: "", message: "" });
-    }, 3000);
+    
+    try {
+      const response = await fetch('https://prod-api.fairpay.pe/api/1.0/user/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'TOKENTAP': 'bMwRmtqpH9fg3WnHgZxxFv4yG00YxVe5',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          organization: formData.company,
+          phone: formData.phone,
+          message: formData.message,
+        }),
+      });
+
+      if (response.ok) {
+        console.log('Form submitted successfully');
+        setIsSubmitted(true);
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setFormData({ name: "", email: "", company: "", phone: "", message: "" });
+        }, 3000);
+      } else {
+        console.error('Error submitting form:', response.statusText);
+        // Handle error (show error message to user)
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      // Handle error (show error message to user)
+    }
   };
 
   return (
