@@ -1,11 +1,33 @@
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
-import { Check, Star, ArrowRight, Building2, Users, Building, Rocket } from "lucide-react";
+import { ArrowRight, Building2, Users, Building, Rocket, Check, Star } from "lucide-react";
 
 export function Pricing() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  const handleCotizarClick = (plan: any) => {
+    // Create plan information message
+    const planInfo = plan.customQuote 
+      ? `Estoy interesado en el ${plan.name} - ${plan.range}\n${plan.description}\n\nMe gustaría recibir información sobre las soluciones personalizadas para corporaciones.`
+      : `Estoy interesado en el ${plan.name} - ${plan.range}\n${plan.description}\n\nMódulos incluidos:\n${plan.modules.map((m: any) => `- ${m.name}: $${m.price.toLocaleString("en-US", { minimumFractionDigits: 2 })} USD`).join('\n')}`;
+    
+    console.log('Setting plan info:', planInfo);
+    
+    // Store in sessionStorage for the contact form to use
+    sessionStorage.setItem('planInfo', planInfo);
+    
+    // Navigate to contact form with a small delay to ensure the form is ready
+    const contactElement = document.getElementById('contacto');
+    if (contactElement) {
+      contactElement.scrollIntoView({ behavior: 'smooth' });
+      // Trigger a custom event to notify the contact form
+      setTimeout(() => {
+        window.dispatchEvent(new CustomEvent('planInfoUpdated', { detail: planInfo }));
+      }, 500);
+    }
+  };
 
   const plans = [
     {
@@ -246,13 +268,13 @@ export function Pricing() {
                 </div>
 
                 {/* CTA Button */}
-                <a
-                  href="#contacto"
+                <button
+                  onClick={() => handleCotizarClick(plan)}
                   className={`w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r ${plan.color} text-white rounded-xl font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105 group`}
                 >
                   {plan.customQuote ? "Solicitar Cotización" : "Cotizar"}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </a>
+                </button>
               </div>
             </motion.div>
           ))}

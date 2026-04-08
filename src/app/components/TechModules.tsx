@@ -87,7 +87,7 @@ export function TechModules() {
     },
     {
       icon: FileText,
-      name: "FAIRPAY Production Manager",
+      name: "FAIRPAY Structure",
       title: "Gerente de Producción",
       description: "Herramientas especializadas para la gestión de producción y operaciones.",
       features: [
