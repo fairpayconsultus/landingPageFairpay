@@ -73,10 +73,10 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-xl border border-[#a8d9fa]/50 rounded-full shadow-xl shadow-[#a8d9fa]/20"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#10182b] to-[#405687] border border-[#10182b]/50 rounded-full shadow-xl shadow-[#405687]/40"
           >
-            <Sparkles className="w-4 h-4 text-[#405687]" />
-            <span className="text-sm font-semibold text-[#10182b]">
+            <Sparkles className="w-4 h-4 text-white" />
+            <span className="text-sm font-semibold text-white">
               Arquitectura Salarial Inteligente
             </span>
           </motion.div>
@@ -86,7 +86,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight"
           >
             <span className="block text-gray-900">Transformamos la gestión del</span>
             <span className="block text-gray-900">talento en</span>
