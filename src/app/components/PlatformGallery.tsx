@@ -1,8 +1,6 @@
-import { motion } from "motion/react";
-import { useInView } from "motion/react";
-import { useRef } from "react";
+import { motion, AnimatePresence, useInView } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
 
 import img1 from "../../assets/web/1-General.jpg";
 import img2 from "../../assets/web/2-Analiticas.jpg";
@@ -23,16 +21,16 @@ export function PlatformGallery() {
 
   const images = [
     { src: img1, title: "Dashboard General", module: "FAIRPAY Suite" },
-    { src: img2, title: "Analíticas", module: "FAIRPAY Graphics" },
-    { src: img3, title: "Estructura Organizacional y Puestos", module: "FAIRPAY Areas and positions" },
-    { src: img4, title: "Base de Datos de Trabajadores", module: "FAIRPAY Workers" },
-    { src: img5, title: "Descripción de Perfiles", module: "FAIRPAY Job profiles" },
-    { src: img6, title: "Gerente de Producción", module: "FAIRPAY Production Manager" },
-    { src: img7, title: "Valoración y Categorización", module: "FAIRPAY Value" },
-    { src: img8, title: "Equidad Interna", module: "FAIRPAY Salary Analysis" },
-    { src: img9, title: "Equidad Externa", module: "FAIRPAY Salary Market" },
-    { src: img10, title: "Estructura Salarial", module: "FAIRPAY Broadbandig" },
-    { src: img11, title: "Análisis", module: "FAIRPAY Salary Analysis" },
+    { src: img2, title: "Analíticas", module: "Fairpay Analitycs" },
+    { src: img3, title: "Estructura Organizacional y Puestos", module: "Fairpay Organization" },
+    { src: img4, title: "Base de Datos de Trabajadores", module: "Fairpay Data" },
+    { src: img5, title: "Descripción de Perfiles", module: "Fairpay Jobs" },
+    { src: img6, title: "Detalle del Puesto", module: "Fairpay Jobs" },
+    { src: img7, title: "Valoración y Categorización", module: "Fairpay Value" },
+    { src: img8, title: "Equidad Interna", module: "Fairpay Salary Analysis" },
+    { src: img9, title: "Equidad Externa", module: "Fairpay Salary Market" },
+    { src: img10, title: "Estructura Salarial", module: "Fairpay Broadbandig" },
+    { src: img11, title: "Análisis", module: "Fairpay Salary Analysis" },
   ];
 
   const nextSlide = () => {
@@ -79,16 +77,18 @@ export function PlatformGallery() {
         >
           {/* Main Image */}
           <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/50 backdrop-blur-xl">
-            <motion.img
-              key={currentIndex}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-              src={images[currentIndex].src}
-              alt={images[currentIndex].title}
-              className="w-full h-auto object-cover"
-            />
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={currentIndex}
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{ duration: 0.8, ease: "easeInOut" }}
+                src={images[currentIndex].src}
+                alt={images[currentIndex].title}
+                className="w-full h-auto object-cover"
+              />
+            </AnimatePresence>
             {/* Overlay with title and module */}
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-8">
               <span className="inline-block text-xs font-bold px-3 py-1 rounded-full bg-gradient-to-r from-[#10182b] to-[#a8d9fa] text-white mb-3">

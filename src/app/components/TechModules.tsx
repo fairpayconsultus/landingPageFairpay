@@ -19,7 +19,7 @@ export function TechModules() {
   const modules = [
     {
       icon: FileText,
-      name: "FAIRPAY Graphics",
+      name: "Fairpay Analitycs",
       title: "Analíticas",
       description: "Visualización de datos y análisis gráficos para la toma de decisiones estratégicas.",
       features: [
@@ -36,7 +36,7 @@ export function TechModules() {
     },
     {
       icon: FileText,
-      name: "FAIRPAY Areas and positions",
+      name: "Fairpay Organization",
       title: "Estructura Organizacional y Puestos",
       description: "Gestión de la estructura organizacional y definición de puestos jerárquicos.",
       features: [
@@ -53,7 +53,7 @@ export function TechModules() {
     },
     {
       icon: FileText,
-      name: "FAIRPAY Workers",
+      name: "Fairpay Data",
       title: "Base de Datos de Trabajadores",
       description: "Gestión centralizada de información de empleados y datos laborales.",
       features: [
@@ -70,7 +70,7 @@ export function TechModules() {
     },
     {
       icon: FileText,
-      name: "FAIRPAY Job profiles",
+      name: "Fairpay Jobs",
       title: "Descripción de Perfiles",
       description: "Definición detallada de perfiles de competencias y requisitos por puesto.",
       features: [
@@ -87,7 +87,7 @@ export function TechModules() {
     },
     {
       icon: FileText,
-      name: "FAIRPAY Structure",
+      name: "Fairpay Salary",
       title: "Estructuras salariales",
       description: "Herramientas especializadas para la gestión de producción y operaciones.",
       features: [
