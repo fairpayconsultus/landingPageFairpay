@@ -1,3 +1,4 @@
+import { GoogleTagManager } from "./components/GoogleTagManager";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { ValueProposition } from "./components/ValueProposition";
@@ -12,6 +13,7 @@ import { WhatsAppButton } from "./components/WhatsAppButton";
 export default function App() {
   return (
     <div className="min-h-screen bg-white font-[Inter,system-ui,sans-serif] antialiased">
+      <GoogleTagManager />
       <Navbar />
       <Hero />
       <ValueProposition />
