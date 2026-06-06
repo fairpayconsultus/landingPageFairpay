@@ -229,7 +229,7 @@ export function TechModules() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#a8d9fa]/10 to-[#10182b]/10 text-[#a8d9fa] rounded-full font-semibold mb-4">
               <Rocket className="w-4 h-4 text-gray-900" />
-              <span className="text-[#85b2d0] text-[#87b0cc] text-[#829cae] text-[#444545] text-[#000000] text-[#000000] text-[#000000] text-[#000000] text-[#000000] text-[#000000] text-[#000000]">Próximamente</span>
+              <span className="text-[#10182b]">Próximamente</span>
             </div>
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
               Innovación{" "}
