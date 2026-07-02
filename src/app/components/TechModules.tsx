@@ -102,6 +102,22 @@ export function TechModules() {
       iconColor: "text-[#a8d9fa]",
       available: true,
     },
+    {
+      icon: Briefcase,
+      name: "Fairpay Budget",
+      title: "Presupuesto de Personal",
+      description: "Gestiona de forma integral el presupuesto de personal y monitorea la ejecución presupuestal de tu organización con herramientas de análisis y control en tiempo real.",
+      features: [
+        "Presupuesto aprobado vs. ejecutado - Seguimiento de la ejecución del presupuesto de personal por áreas.",
+        "Número y costo de puestos asignados - Control de los puestos ocupados y su impacto presupuestal.",
+        "Número y costo de puestos vacantes - Identificación del presupuesto disponible asociado a vacantes.",
+        "Proyecciones presupuestales - Estimaciones del gasto futuro en personal para apoyar la planificación organizacional.",
+      ],
+      color: "from-[#405687] to-[#a8d9fa]",
+      iconBg: "bg-indigo-100",
+      iconColor: "text-[#405687]",
+      available: true,
+    },
   ];
 
   const upcomingFeatures = [
@@ -112,16 +128,10 @@ export function TechModules() {
       status: "En desarrollo",
     },
     {
-      icon: Briefcase,
-      title: "Presupuesto de Personal por Áreas",
-      description: "Gestiona de forma integral el presupuesto de personal y monitorea la ejecución presupuestal de tu organización con herramientas de análisis y control en tiempo real.",
+      icon: TrendingUp,
+      title: "Líneas de Carrera",
+      description: "Estructura y visualiza las rutas de crecimiento profesional dentro de la organización, integrando el desarrollo vertical o jerárquico y el desarrollo horizontal, funcional o experto.\n\nA partir de la arquitectura de puestos y los perfiles requeridos, genera mapas de carrera claros y trazables que facilitan la movilidad interna, la sucesión y la retención del talento.",
       status: "En desarrollo",
-      features: [
-        "Presupuesto aprobado vs. ejecutado - Seguimiento de la ejecución del presupuesto de personal por áreas.",
-        "Número y costo de puestos asignados - Control de los puestos ocupados y su impacto presupuestal.",
-        "Número y costo de puestos vacantes - Identificación del presupuesto disponible asociado a vacantes.",
-        "Proyecciones presupuestales - Estimaciones del gasto futuro en personal para apoyar la planificación organizacional.",
-      ],
     },
   ];
 
