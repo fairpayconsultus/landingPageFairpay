@@ -1,0 +1,313 @@
+<section id="precios" class="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+  <!-- Background Decoration -->
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute top-0 left-0 w-96 h-96 bg-[#10182b]/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-[#a8d9fa]/5 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#405687]/3 rounded-full blur-3xl"></div>
+  </div>
+
+  <!-- Floating decorative elements -->
+  <div class="absolute inset-0 pointer-events-none overflow-hidden">
+    <div class="absolute top-24 left-20 w-16 h-16 rounded-2xl bg-gradient-to-br from-[#10182b]/10 to-transparent backdrop-blur-sm border border-blue-200/30 animate-float-pricing-1"></div>
+    <div class="absolute top-1/3 right-12 w-20 h-20 rounded-full bg-gradient-to-br from-[#a8d9fa]/10 to-transparent backdrop-blur-sm border border-cyan-200/30 animate-float-pricing-2"></div>
+    <div class="absolute bottom-1/4 left-1/4 w-24 h-24 rounded-3xl bg-gradient-to-br from-[#405687]/8 to-transparent backdrop-blur-sm border border-blue-200/30 animate-float-pricing-3"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- Section Header -->
+    <div class="text-center mb-16 reveal-on-scroll">
+      <span class="inline-block px-4 py-2 bg-gradient-to-r from-[#10182b]/10 to-[#a8d9fa]/10 text-[#10182b] rounded-full font-semibold mb-4">
+        Precios Flexibles
+      </span>
+      <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+        Planes diseñados para <span class="bg-gradient-to-r from-[#10182b] via-[#405687] to-[#a8d9fa] bg-clip-text text-transparent">tu organización</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Selecciona el módulo que necesitas según el tamaño de tu empresa
+      </p>
+    </div>
+
+    <!-- Pricing Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Plan 1 -->
+      <div class="relative group reveal-on-scroll" style="transition-delay: 0s">
+        <div class="h-full bg-gradient-to-br from-blue-100/70 to-indigo-100/70 rounded-3xl p-8 border-2 border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-14 h-14 bg-gradient-to-br from-[#10182b] to-[#405687] rounded-2xl flex items-center justify-center shadow-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-white"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h2"/><path d="M18 18h2a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+            </div>
+            <div class="w-2 h-2 rounded-full bg-gradient-to-r from-[#10182b] to-[#405687]"></div>
+          </div>
+          <div class="mb-6">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Plan 1</h3>
+            <p class="text-lg font-bold bg-gradient-to-r from-[#10182b] to-[#405687] bg-clip-text text-transparent mb-1">
+              De 10 a 50 Puestos
+            </p>
+            <p class="text-sm text-gray-600">Ideal para pequeñas empresas</p>
+          </div>
+          
+          <div class="space-y-4 mb-8">
+            {[
+              { name: "Descripción de Puestos", price: 550.0 },
+              { name: "Valoración y Categorización", price: 880.0 },
+              { name: "Equidad y Competitividad", price: 1045.0 },
+              { name: "Estructuras Salariales (Completo)", price: 1292.5 }
+            ].map((module) => (
+              <div class="bg-white/70 backdrop-blur-sm rounded-xl p-4 hover:shadow-md transition-shadow">
+                <div class="flex justify-between items-start gap-2 mb-2">
+                  <span class="text-sm font-medium text-gray-700 flex-1">{module.name}</span>
+                  <div class="w-5 h-5 rounded-full bg-gradient-to-r from-[#10182b] to-[#405687] flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-white"><path d="M20 6 9 17l-5-5"/></svg>
+                  </div>
+                </div>
+                <p class="font-bold bg-gradient-to-r from-[#10182b] to-[#405687] bg-clip-text text-transparent">
+                  ${module.price.toLocaleString("en-US", { minimumFractionDigits: 2 })} USD
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <button
+            class="cotizar-btn w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-[#10182b] to-[#405687] text-white rounded-xl font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105 group cursor-pointer"
+            data-plan-name="Plan 1"
+            data-plan-range="De 10 a 50 Puestos"
+            data-plan-desc="Ideal para pequeñas empresas"
+            data-modules={JSON.stringify([
+              { name: "Descripción de Puestos", price: 550.0 },
+              { name: "Valoración y Categorización", price: 880.0 },
+              { name: "Equidad y Competitividad", price: 1045.0 },
+              { name: "Estructuras Salariales (Completo)", price: 1292.5 }
+            ])}
+          >
+            Cotizar
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Plan 2 -->
+      <div class="relative group" style="transition-delay: 0.1s">
+        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-[#a8d9fa] to-[#10182b] text-white rounded-full shadow-lg text-xs font-bold">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 text-white"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Más Popular
+          </div>
+        </div>
+        <div class="h-full bg-gradient-to-br from-cyan-100/70 to-blue-100/70 rounded-3xl p-8 border-2 border-[#a8d9fa] shadow-lg hover:shadow-2xl transition-all duration-500 scale-105">
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-14 h-14 bg-gradient-to-br from-[#a8d9fa] to-[#10182b] rounded-2xl flex items-center justify-center shadow-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-white"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="w-2 h-2 rounded-full bg-gradient-to-r from-[#a8d9fa] to-[#10182b]"></div>
+          </div>
+          <div class="mb-6">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Plan 2</h3>
+            <p class="text-lg font-bold bg-gradient-to-r from-[#a8d9fa] to-[#10182b] bg-clip-text text-transparent mb-1">
+              De 51 a 200 Puestos
+            </p>
+            <p class="text-sm text-gray-600">Perfecto para empresas en crecimiento</p>
+          </div>
+          
+          <div class="space-y-4 mb-8">
+            {[
+              { name: "Descripción de Puestos", price: 1760.0 },
+              { name: "Valoración y Categorización", price: 2816.0 },
+              { name: "Equidad y Competitividad", price: 3344.0 },
+              { name: "Estructuras Salariales (Completo)", price: 4136.0 }
+            ].map((module) => (
+              <div class="bg-white/70 backdrop-blur-sm rounded-xl p-4 hover:shadow-md transition-shadow">
+                <div class="flex justify-between items-start gap-2 mb-2">
+                  <span class="text-sm font-medium text-gray-700 flex-1">{module.name}</span>
+                  <div class="w-5 h-5 rounded-full bg-gradient-to-r from-[#a8d9fa] to-[#10182b] flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-white"><path d="M20 6 9 17l-5-5"/></svg>
+                  </div>
+                </div>
+                <p class="font-bold bg-gradient-to-r from-[#a8d9fa] to-[#10182b] bg-clip-text text-transparent">
+                  ${module.price.toLocaleString("en-US", { minimumFractionDigits: 2 })} USD
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <button
+            class="cotizar-btn w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-[#a8d9fa] to-[#10182b] text-white rounded-xl font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105 group cursor-pointer"
+            data-plan-name="Plan 2"
+            data-plan-range="De 51 a 200 Puestos"
+            data-plan-desc="Perfecto para empresas en crecimiento"
+            data-modules={JSON.stringify([
+              { name: "Descripción de Puestos", price: 1760.0 },
+              { name: "Valoración y Categorización", price: 2816.0 },
+              { name: "Equidad y Competitividad", price: 3344.0 },
+              { name: "Estructuras Salariales (Completo)", price: 4136.0 }
+            ])}
+          >
+            Cotizar
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Plan 3 -->
+      <div class="relative group reveal-on-scroll" style="transition-delay: 0.2s">
+        <div class="h-full bg-gradient-to-br from-indigo-100/70 to-blue-100/70 rounded-3xl p-8 border-2 border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-14 h-14 bg-gradient-to-br from-[#405687] to-[#10182b] rounded-2xl flex items-center justify-center shadow-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-white"><path d="M4 22V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v18Z"/><path d="M9 18h6"/><path d="M9 14h6"/><path d="M9 10h6"/><path d="M9 6h6"/></svg>
+            </div>
+            <div class="w-2 h-2 rounded-full bg-gradient-to-r from-[#405687] to-[#10182b]"></div>
+          </div>
+          <div class="mb-6">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Plan 3</h3>
+            <p class="text-lg font-bold bg-gradient-to-r from-[#405687] to-[#10182b] bg-clip-text text-transparent mb-1">
+              De 201 a 500 Puestos
+            </p>
+            <p class="text-sm text-gray-600">Para grandes organizaciones</p>
+          </div>
+          
+          <div class="space-y-4 mb-8">
+            {[
+              { name: "Descripción de Puestos", price: 3300.0 },
+              { name: "Valoración y Categorización", price: 5280.0 },
+              { name: "Equidad y Competitividad", price: 6270.0 },
+              { name: "Estructuras Salariales (Completo)", price: 7755.0 }
+            ].map((module) => (
+              <div class="bg-white/70 backdrop-blur-sm rounded-xl p-4 hover:shadow-md transition-shadow">
+                <div class="flex justify-between items-start gap-2 mb-2">
+                  <span class="text-sm font-medium text-gray-700 flex-1">{module.name}</span>
+                  <div class="w-5 h-5 rounded-full bg-gradient-to-r from-[#405687] to-[#10182b] flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-white"><path d="M20 6 9 17l-5-5"/></svg>
+                  </div>
+                </div>
+                <p class="font-bold bg-gradient-to-r from-[#405687] to-[#10182b] bg-clip-text text-transparent">
+                  ${module.price.toLocaleString("en-US", { minimumFractionDigits: 2 })} USD
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <button
+            class="cotizar-btn w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-[#405687] to-[#10182b] text-white rounded-xl font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105 group cursor-pointer"
+            data-plan-name="Plan 3"
+            data-plan-range="De 201 a 500 Puestos"
+            data-plan-desc="Para grandes organizaciones"
+            data-modules={JSON.stringify([
+              { name: "Descripción de Puestos", price: 3300.0 },
+              { name: "Valoración y Categorización", price: 5280.0 },
+              { name: "Equidad y Competitividad", price: 6270.0 },
+              { name: "Estructuras Salariales (Completo)", price: 7755.0 }
+            ])}
+          >
+            Cotizar
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Plan Enterprise -->
+      <div class="relative group reveal-on-scroll" style="transition-delay: 0.3s">
+        <div class="h-full bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-8 border-2 border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-14 h-14 bg-gradient-to-br from-[#10182b] to-[#a8d9fa] rounded-2xl flex items-center justify-center shadow-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-white"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+            </div>
+            <div class="w-2 h-2 rounded-full bg-gradient-to-r from-[#10182b] to-[#a8d9fa]"></div>
+          </div>
+          <div class="mb-6">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Plan Enterprise</h3>
+            <p class="text-lg font-bold bg-gradient-to-r from-[#10182b] to-[#a8d9fa] bg-clip-text text-transparent mb-1">
+              Más de 500 Puestos
+            </p>
+            <p class="text-sm text-gray-600">Soluciones personalizadas para corporaciones</p>
+          </div>
+          
+          <div class="space-y-4 mb-8">
+            {[
+              "Todos los módulos incluidos",
+              "Implementación personalizada",
+              "Soporte prioritario 24/7",
+              "Integraciones a medida",
+              "Capacitación para equipos",
+              "Analytics avanzados"
+            ].map((feature) => (
+              <div class="bg-white/70 backdrop-blur-sm rounded-xl p-4 hover:shadow-md transition-shadow">
+                <div class="flex items-start gap-3">
+                  <div class="w-5 h-5 rounded-full bg-gradient-to-r from-[#10182b] to-[#a8d9fa] flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-white"><path d="M20 6 9 17l-5-5"/></svg>
+                  </div>
+                  <span class="text-sm font-medium text-gray-700 leading-relaxed">{feature}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <button
+            class="cotizar-btn w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-[#10182b] to-[#a8d9fa] text-white rounded-xl font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105 group cursor-pointer"
+            data-plan-name="Plan Enterprise"
+            data-plan-range="Más de 500 Puestos"
+            data-plan-desc="Soluciones personalizadas para corporaciones"
+            data-custom-quote="true"
+          >
+            Solicitar Cotización
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Info -->
+    <div class="mt-16 text-center reveal-on-scroll">
+      <div class="inline-flex flex-col sm:flex-row items-center gap-6 p-8 bg-white/70 backdrop-blur-xl rounded-3xl border border-gray-200/50 shadow-xl">
+        <div class="w-16 h-16 bg-gradient-to-br from-[#10182b] to-[#a8d9fa] rounded-2xl flex items-center justify-center flex-shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-white"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="text-center sm:text-left">
+          <h3 class="text-xl font-bold text-gray-900 mb-2">¿Necesitas un plan personalizado?</h3>
+          <p class="text-gray-600">
+            Contáctanos para soluciones empresariales personalizadas con funcionalidades adicionales
+          </p>
+        </div>
+        <a
+          href="#contacto"
+          class="px-8 py-3 bg-[#a8d9fa] text-[#10182b] rounded-full font-semibold hover:bg-[#7bc3f2] hover:shadow-xl transition-all duration-300 whitespace-nowrap"
+        >
+          Contactar
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const cotizarBtns = document.querySelectorAll('.cotizar-btn');
+
+    cotizarBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const planName = btn.getAttribute('data-plan-name');
+        const planRange = btn.getAttribute('data-plan-range');
+        const planDesc = btn.getAttribute('data-plan-desc');
+        const isCustomQuote = btn.getAttribute('data-custom-quote') === 'true';
+
+        let planInfo = '';
+        if (isCustomQuote) {
+          planInfo = `Estoy interesado en el ${planName} - ${planRange}\n${planDesc}\n\nMe gustaría recibir información sobre las soluciones personalizadas para corporaciones.`;
+        } else {
+          const modulesData = JSON.parse(btn.getAttribute('data-modules') || '[]');
+          const modulesList = modulesData.map((m: any) => `- ${m.name}: $${m.price.toLocaleString("en-US", { minimumFractionDigits: 2 })} USD`).join('\n');
+          planInfo = `Estoy interesado en el ${planName} - ${planRange}\n${planDesc}\n\nMódulos incluidos:\n${modulesList}`;
+        }
+
+        console.log('Setting plan info:', planInfo);
+        sessionStorage.setItem('planInfo', planInfo);
+
+        const contactElement = document.getElementById('contacto');
+        if (contactElement) {
+          contactElement.scrollIntoView({ behavior: 'smooth' });
+          setTimeout(() => {
+            window.dispatchEvent(new CustomEvent('planInfoUpdated', { detail: planInfo }));
+          }, 500);
+        }
+      });
+    });
+  });
+</script>

@@ -1,0 +1,212 @@
+---
+import img1 from "../assets/web/1-General.jpg";
+import img2 from "../assets/web/2-Analiticas.jpg";
+import img3 from "../assets/web/3-Estructura-organizacional-y-puestos.jpg";
+import img4 from "../assets/web/4-Base-de-datos-de-trabajadores-b.jpg";
+import img5 from "../assets/web/5-Descripción-perfiles.jpg";
+import img6 from "../assets/web/6-Gerente-de-producción-b.jpg";
+import img7 from "../assets/web/7-Valoración-y-categorización-b.jpg";
+import img8 from "../assets/web/8-Equidad-interna.jpg";
+import img9 from "../assets/web/9-Equidad-externa.jpg";
+import img10 from "../assets/web/10-Estructura-Salarial-b.jpg";
+import img11 from "../assets/web/11-Analisis-b.jpg";
+
+const images = [
+  { src: img1.src, title: "Dashboard General", module: "FAIRPAY Suite" },
+  { src: img2.src, title: "Analíticas", module: "Fairpay Analitycs" },
+  { src: img3.src, title: "Estructura Organizacional y Puestos", module: "Fairpay Organization" },
+  { src: img4.src, title: "Base de Datos de Trabajadores", module: "Fairpay Data" },
+  { src: img5.src, title: "Descripción de Perfiles", module: "Fairpay Jobs" },
+  { src: img6.src, title: "Detalle del Puesto", module: "Fairpay Jobs" },
+  { src: img7.src, title: "Valoración y Categorización", module: "Fairpay Value" },
+  { src: img8.src, title: "Equidad Interna", module: "Fairpay Salary Analysis" },
+  { src: img9.src, title: "Equidad Externa", module: "Fairpay Salary Market" },
+  { src: img10.src, title: "Estructura Salarial", module: "Fairpay Broadbandig" },
+  { src: img11.src, title: "Análisis", module: "Fairpay Salary Analysis" },
+];
+---
+
+<section id="galeria" class="relative py-24 bg-gradient-to-b from-white via-slate-50/50 to-blue-50/30 overflow-hidden">
+  <!-- Background Decoration -->
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute top-1/4 right-0 w-96 h-96 bg-[#a8d9fa]/15 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-1/4 left-0 w-96 h-96 bg-[#10182b]/10 rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- Section Header -->
+    <div class="text-center mb-16 reveal-on-scroll">
+      <span class="inline-block px-4 py-2 bg-gradient-to-r from-[#10182b]/10 to-[#405687]/10 text-[#10182b] rounded-full font-semibold mb-4">
+        Galería
+      </span>
+      <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+        Conoce la plataforma
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Explora las vistas y funcionalidades de FAIRPAY Suite
+      </p>
+    </div>
+
+    <!-- Main Gallery -->
+    <div class="relative mb-12 reveal-on-scroll">
+      <!-- Main Image -->
+      <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-white/50 backdrop-blur-xl">
+        <img
+          id="gallery-main-image"
+          src={images[0].src}
+          alt={images[0].title}
+          class="w-full h-auto object-cover transition-opacity duration-300"
+        />
+        <!-- Overlay with title and module -->
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-8">
+          <span id="gallery-main-badge" class="inline-block text-xs font-bold px-3 py-1 rounded-full bg-gradient-to-r from-[#10182b] to-[#a8d9fa] text-white mb-3">
+            {images[0].module}
+          </span>
+          <h3 id="gallery-main-title" class="text-2xl font-bold text-white">{images[0].title}</h3>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <button
+        id="gallery-prev"
+        class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white/90 backdrop-blur-xl rounded-full flex items-center justify-center hover:bg-white shadow-lg transition-all duration-300 hover:scale-110 group focus:outline-none cursor-pointer"
+        aria-label="Previous image"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-[#10182b] group-hover:text-[#405687]"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <button
+        id="gallery-next"
+        class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white/90 backdrop-blur-xl rounded-full flex items-center justify-center hover:bg-white shadow-lg transition-all duration-300 hover:scale-110 group focus:outline-none cursor-pointer"
+        aria-label="Next image"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-[#10182b] group-hover:text-[#405687]"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+
+      <!-- Indicator Dots -->
+      <div class="flex justify-center items-center gap-2 mt-6">
+        {images.map((_, index) => (
+          <button
+            class={`gallery-dot h-2 rounded-full transition-all duration-300 focus:outline-none cursor-pointer ${
+              index === 0
+                ? "w-8 bg-gradient-to-r from-[#10182b] to-[#a8d9fa]"
+                : "w-2 bg-gray-300 hover:bg-gray-400"
+            }`}
+            data-index={index}
+            aria-label={`Go to image ${index + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+
+    <!-- Thumbnail Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 reveal-on-scroll">
+      {images.map((image, index) => (
+        <div class="flex flex-col gap-2">
+          <button
+            class={`gallery-thumb relative rounded-xl overflow-hidden border-2 transition-all duration-300 focus:outline-none cursor-pointer ${
+              index === 0
+                ? "border-[#10182b] shadow-lg"
+                : "border-gray-200 hover:border-[#a8d9fa]"
+            }`}
+            data-index={index}
+          >
+            <img
+              src={image.src}
+              alt={image.title}
+              class="w-full h-24 object-cover"
+            />
+            <div class={`thumb-overlay absolute inset-0 bg-gradient-to-t from-[#10182b]/40 to-transparent transition-opacity duration-300 ${index === 0 ? "opacity-100" : "opacity-0"}`} />
+          </button>
+          <p class="text-xs font-semibold text-gray-700 text-center line-clamp-2">
+            {image.title}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script define:vars={{ images }}>
+  document.addEventListener('DOMContentLoaded', () => {
+    let currentIndex = 0;
+    const mainImg = document.getElementById('gallery-main-image');
+    const mainBadge = document.getElementById('gallery-main-badge');
+    const mainTitle = document.getElementById('gallery-main-title');
+    const prevBtn = document.getElementById('gallery-prev');
+    const nextBtn = document.getElementById('gallery-next');
+    const dots = document.querySelectorAll('.gallery-dot');
+    const thumbs = document.querySelectorAll('.gallery-thumb');
+    const overlays = document.querySelectorAll('.thumb-overlay');
+
+    function updateGallery(index) {
+      if (index < 0 || index >= images.length) return;
+      currentIndex = index;
+
+      // Transition fade out
+      mainImg.classList.add('opacity-0');
+
+      setTimeout(() => {
+        // Update content
+        mainImg.src = images[currentIndex].src;
+        mainImg.alt = images[currentIndex].title;
+        mainBadge.textContent = images[currentIndex].module;
+        mainTitle.textContent = images[currentIndex].title;
+
+        // Transition fade in
+        mainImg.classList.remove('opacity-0');
+      }, 150);
+
+      // Update dots
+      dots.forEach((dot, idx) => {
+        if (idx === currentIndex) {
+          dot.className = 'gallery-dot h-2 rounded-full transition-all duration-300 focus:outline-none cursor-pointer w-8 bg-gradient-to-r from-[#10182b] to-[#a8d9fa]';
+        } else {
+          dot.className = 'gallery-dot h-2 rounded-full transition-all duration-300 focus:outline-none cursor-pointer w-2 bg-gray-300 hover:bg-gray-400';
+        }
+      });
+
+      // Update thumbnails
+      thumbs.forEach((thumb, idx) => {
+        if (idx === currentIndex) {
+          thumb.className = 'gallery-thumb relative rounded-xl overflow-hidden border-2 transition-all duration-300 focus:outline-none cursor-pointer border-[#10182b] shadow-lg';
+        } else {
+          thumb.className = 'gallery-thumb relative rounded-xl overflow-hidden border-2 transition-all duration-300 focus:outline-none cursor-pointer border-gray-200 hover:border-[#a8d9fa]';
+        }
+      });
+
+      // Update overlays
+      overlays.forEach((overlay, idx) => {
+        if (idx === currentIndex) {
+          overlay.className = 'thumb-overlay absolute inset-0 bg-gradient-to-t from-[#10182b]/40 to-transparent transition-opacity duration-300 opacity-100';
+        } else {
+          overlay.className = 'thumb-overlay absolute inset-0 bg-gradient-to-t from-[#10182b]/40 to-transparent transition-opacity duration-300 opacity-0';
+        }
+      });
+    }
+
+    prevBtn?.addEventListener('click', () => {
+      let idx = currentIndex - 1;
+      if (idx < 0) idx = images.length - 1;
+      updateGallery(idx);
+    });
+
+    nextBtn?.addEventListener('click', () => {
+      const idx = (currentIndex + 1) % images.length;
+      updateGallery(idx);
+    });
+
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        const idx = parseInt(dot.getAttribute('data-index') || '0', 10);
+        updateGallery(idx);
+      });
+    });
+
+    thumbs.forEach((thumb) => {
+      thumb.addEventListener('click', () => {
+        const idx = parseInt(thumb.getAttribute('data-index') || '0', 10);
+        updateGallery(idx);
+      });
+    });
+  });
+</script>

@@ -1,0 +1,127 @@
+---
+import logoFairpay from '../assets/LogoFairpay.svg';
+
+const navItems = [
+  { label: "Inicio", href: "#hero" },
+  { label: "Beneficios", href: "#cambio" },
+  { label: "Módulos", href: "#modulos" },
+  { label: "Precios", href: "#precios" },
+  { label: "Contacto", href: "#contacto" },
+];
+---
+
+<nav
+  id="navbar"
+  class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-white/95 border-b border-gray-300/60 shadow-sm transition-all duration-300 transform -translate-y-full"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-24">
+      <!-- Logo -->
+      <div class="flex items-center opacity-0 transition-opacity duration-500 delay-200" id="nav-logo">
+        <a href="#hero" class="flex items-center">
+          <img 
+            src={logoFairpay.src}
+            alt="Fairpay Suite" 
+            class="h-16 w-auto"
+          />
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8">
+        {navItems.map((item, index) => (
+          <a
+            href={item.href}
+            class="nav-link text-gray-700 hover:text-[#10182b] transition-colors duration-300 font-medium opacity-0 transform -translate-y-2"
+            style={`transition-delay: ${0.1 * index}s`}
+          >
+            {item.label}
+          </a>
+        ))}
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="menu-toggle"
+        class="md:hidden text-gray-700 hover:text-[#10182b] transition-colors focus:outline-none"
+        aria-label="Abrir menú"
+      >
+        <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x hidden"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="hidden md:hidden py-4 space-y-4 border-t border-gray-200 transition-all duration-300"
+    >
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          class="mobile-nav-link block text-gray-700 hover:text-[#10182b] transition-colors font-medium"
+        >
+          {item.label}
+        </a>
+      ))}
+      <a
+        href="#contacto"
+        class="mobile-nav-link block w-full text-center px-6 py-2.5 bg-gradient-to-r from-[#10182b] to-[#405687] text-white rounded-full font-medium"
+      >
+        Solicitar Demo
+      </a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const navbar = document.getElementById('navbar');
+    const navLogo = document.getElementById('nav-logo');
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    // Slide-in navbar animations on load
+    setTimeout(() => {
+      navbar?.classList.remove('-translate-y-full');
+      if (navLogo) navLogo.style.opacity = '1';
+      navLinks.forEach((link) => {
+        (link as HTMLElement).style.opacity = '1';
+        (link as HTMLElement).style.transform = 'translateY(0)';
+      });
+    }, 100);
+
+    // Mobile menu toggle
+    menuToggle?.addEventListener('click', () => {
+      const isClosed = mobileMenu?.classList.contains('hidden');
+      if (isClosed) {
+        mobileMenu?.classList.remove('hidden');
+        menuIcon?.classList.add('hidden');
+        closeIcon?.classList.remove('hidden');
+      } else {
+        mobileMenu?.classList.add('hidden');
+        menuIcon?.classList.remove('hidden');
+        closeIcon?.classList.add('hidden');
+      }
+    });
+
+    // Close menu when clicking a link
+    mobileNavLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileMenu?.classList.add('hidden');
+        menuIcon?.classList.remove('hidden');
+        closeIcon?.classList.add('hidden');
+      });
+    });
+  });
+</script>
+
+<style>
+  .nav-link {
+    transition: opacity 0.5s ease, transform 0.5s ease, color 0.3s ease;
+  }
+</style>
